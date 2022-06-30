@@ -9,8 +9,25 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            NoticeView()
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("공지")
+                }
+            
+            FavoriteView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("즐겨찾기")
+                }
+            
+            SettingView()
+                .tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("설정")
+                }
+        }
     }
 }
 
