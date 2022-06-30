@@ -19,46 +19,81 @@ struct SettingView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(content: {
-                    Toggle("새로운 공지사항 알림", isOn: $kwNewNotice)
-                    Toggle("기존 공지사항 수정 알림", isOn: $kwEditNotice)
-                }, header: {
-                    Text("광운대학교 알림")
-                        .foregroundColor(.accentColor)
-                })
+                Section(
+                    content: kwNotificationSettings,
+                    header: kwNotificationHeader
+                )
                 
-                Section(content: {
-                    Toggle("새로운 공지사항 알림", isOn: $swNewNotice)
-                }, header: {
-                    Text("SW중심대학산업단 알림")
-                        .foregroundColor(.accentColor)
-                })
+                Section(
+                    content: swNotificationSettings,
+                    header: swNotificationHeader
+                )
                 
-                Section(content: {
-                    NavigationLink(destination: {
-                        Text("Link")
-                    }, label: {
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text("개발 및 피드백")
-                            Text(verbatim: "yy0867@gmail.com")
-                                .foregroundColor(.gray)
-                                .font(.caption)
-                        }
-                    })
-                    
-                    NavigationLink(destination: {
-                        Text("Link")
-                    }, label: {
-                        Text("버전 1.0.0")
-                    })
-                }, header: {
-                    Text("앱 정보")
-                        .foregroundColor(.accentColor)
-                })
+                Section(
+                    content: appInformation,
+                    header: appInformationHeader
+                )
             }
             .navigationTitle("설정")
             .listStyle(.inset)
         }
+    }
+}
+
+extension SettingView {
+    // MARK: - KW Notification
+    @ViewBuilder
+    func kwNotificationSettings() -> some View {
+        Toggle("새로운 공지사항 알림", isOn: $kwNewNotice)
+        Toggle("기존 공지사항 수정 알림", isOn: $kwEditNotice)
+    }
+    
+    func kwNotificationHeader() -> some View {
+        Text("광운대학교 알림")
+            .foregroundColor(.accentColor)
+    }
+    
+    // MARK: - SW Notification
+    @ViewBuilder
+    func swNotificationSettings() -> some View {
+        Toggle("새로운 공지사항 알림", isOn: $swNewNotice)
+    }
+    
+    func swNotificationHeader() -> some View {
+        Text("SW중심대학산업단 알림")
+            .foregroundColor(.accentColor)
+    }
+    
+    // MARK: - App Information
+    @ViewBuilder
+    func appInformation() -> some View {
+        NavigationLink(
+            destination: {},
+            label: developAndFeedback
+        )
+        
+        NavigationLink(
+            destination: {},
+            label: version
+        )
+    }
+    
+    func developAndFeedback() -> some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text("개발 및 피드백")
+            Text(verbatim: "yy0867@gmail.com")
+                .foregroundColor(.gray)
+                .font(.caption)
+        }
+    }
+    
+    func version() -> some View {
+        Text("버전 1.0.0")
+    }
+    
+    func appInformationHeader() -> some View {
+        Text("앱 정보")
+            .foregroundColor(.accentColor)
     }
 }
 
