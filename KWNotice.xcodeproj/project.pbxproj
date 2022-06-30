@@ -14,6 +14,7 @@
 		A57A254B286D7656002DB735 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254A286D7656002DB735 /* NoticeView.swift */; };
 		A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254C286D7661002DB735 /* FavoriteView.swift */; };
 		A57A2551286D7671002DB735 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2550286D7671002DB735 /* SettingView.swift */; };
+		A57A2553286D82F2002DB735 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2552286D82F2002DB735 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A57A254A286D7656002DB735 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		A57A254C286D7661002DB735 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		A57A2550286D7671002DB735 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A57A2552286D82F2002DB735 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A57A2550286D7671002DB735 /* SettingView.swift */,
+				A57A2552286D82F2002DB735 /* Setting.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
 				A57A2551286D7671002DB735 /* SettingView.swift in Sources */,
+				A57A2553286D82F2002DB735 /* Setting.swift in Sources */,
 				A57A254B286D7656002DB735 /* NoticeView.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */,
