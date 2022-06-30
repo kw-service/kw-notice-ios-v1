@@ -11,7 +11,7 @@ import SwiftUI
 struct KWNoticeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

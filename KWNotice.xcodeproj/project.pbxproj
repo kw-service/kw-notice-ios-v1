@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
-		A57A253C286D702E002DB735 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* ContentView.swift */; };
+		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
 		A57A2541286D702F002DB735 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A2540286D702F002DB735 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
-		A57A253B286D702E002DB735 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A57A253D286D702F002DB735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57A2540286D702F002DB735 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
-				A57A253B286D702E002DB735 /* ContentView.swift */,
+				A57A253B286D702E002DB735 /* RootView.swift */,
 				A57A253D286D702F002DB735 /* Assets.xcassets */,
 				A57A253F286D702F002DB735 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57A253C286D702E002DB735 /* ContentView.swift in Sources */,
+				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
