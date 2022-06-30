@@ -10,10 +10,9 @@ import SwiftUI
 struct SettingView: View {
     
     // MARK: - Properties
-    // this properties are temporary.
-    @State private var kwNewNotice: Bool = true
-    @State private var kwEditNotice: Bool = true
-    @State private var swNewNotice: Bool = true
+    @AppStorage(.kwNewNotice) private var kwNewNotice: Bool
+    @AppStorage(.kwEditNotice) private var kwEditNotice: Bool
+    @AppStorage(.swNewNotice) private var swNewNotice: Bool
     
     // MARK: - UI
     var body: some View {
