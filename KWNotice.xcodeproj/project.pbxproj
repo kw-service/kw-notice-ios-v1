@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
-		A57A253C286D702E002DB735 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* ContentView.swift */; };
+		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
 		A57A2541286D702F002DB735 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A2540286D702F002DB735 /* Preview Assets.xcassets */; };
+		A57A254B286D7656002DB735 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254A286D7656002DB735 /* NoticeView.swift */; };
+		A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254C286D7661002DB735 /* FavoriteView.swift */; };
+		A57A2551286D7671002DB735 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2550286D7671002DB735 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
-		A57A253B286D702E002DB735 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A57A253D286D702F002DB735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57A2540286D702F002DB735 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A57A254A286D7656002DB735 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		A57A254C286D7661002DB735 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		A57A2550286D7671002DB735 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		A57A2538286D702E002DB735 /* KWNotice */ = {
 			isa = PBXGroup;
 			children = (
+				A57A2547286D7640002DB735 /* Notice */,
+				A57A2548286D7645002DB735 /* Favorite */,
+				A57A2549286D7648002DB735 /* Setting */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
-				A57A253B286D702E002DB735 /* ContentView.swift */,
+				A57A253B286D702E002DB735 /* RootView.swift */,
 				A57A253D286D702F002DB735 /* Assets.xcassets */,
 				A57A253F286D702F002DB735 /* Preview Content */,
 			);
@@ -65,6 +74,30 @@
 				A57A2540286D702F002DB735 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A57A2547286D7640002DB735 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A57A254A286D7656002DB735 /* NoticeView.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		A57A2548286D7645002DB735 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A57A254C286D7661002DB735 /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		A57A2549286D7648002DB735 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A57A2550286D7671002DB735 /* SettingView.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57A253C286D702E002DB735 /* ContentView.swift in Sources */,
+				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
+				A57A2551286D7671002DB735 /* SettingView.swift in Sources */,
+				A57A254B286D7656002DB735 /* NoticeView.swift in Sources */,
+				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
