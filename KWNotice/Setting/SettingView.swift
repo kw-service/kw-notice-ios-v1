@@ -99,6 +99,10 @@ extension SettingView {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        Group {
+            SettingView()
+            SettingView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
