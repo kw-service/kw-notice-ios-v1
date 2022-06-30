@@ -12,6 +12,9 @@ enum Setting: String {
     case kwNewNotice
     case kwEditNotice
     case swNewNotice
+    
+    static let githubURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
+    static let appStoreURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
 }
 
 extension AppStorage {    

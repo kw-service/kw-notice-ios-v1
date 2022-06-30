@@ -66,15 +66,8 @@ extension SettingView {
     // MARK: - App Information
     @ViewBuilder
     func appInformation() -> some View {
-        NavigationLink(
-            destination: {},
-            label: developAndFeedback
-        )
-        
-        NavigationLink(
-            destination: {},
-            label: version
-        )
+        Link(destination: Setting.githubURL, label: developAndFeedback)
+        Link(destination: Setting.appStoreURL, label: version)
     }
     
     func developAndFeedback() -> some View {
