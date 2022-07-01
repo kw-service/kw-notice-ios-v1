@@ -159,9 +159,33 @@
 		A5D4D76B286ECC5A0019F156 /* KWNoticeKit */ = {
 			isa = PBXGroup;
 			children = (
+				A5D4D779286ECCB90019F156 /* Model */,
+				A5D4D777286ECCB10019F156 /* Repository */,
+				A5D4D778286ECCB50019F156 /* DataStore */,
 				A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */,
 			);
 			path = KWNoticeKit;
+			sourceTree = "<group>";
+		};
+		A5D4D777286ECCB10019F156 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A5D4D778286ECCB50019F156 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		A5D4D779286ECCB90019F156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
