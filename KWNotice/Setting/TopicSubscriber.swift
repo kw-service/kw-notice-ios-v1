@@ -22,6 +22,7 @@ final class TopicSubscriber {
     // MARK: - Methods
     init() {
         subscribeNoticesState()
+        fetchSubscribingState()
     }
     
     // MARK: - Privates
@@ -29,6 +30,10 @@ final class TopicSubscriber {
         subscribeKWNewNotice()
         subscribeKWEditNotice()
         subscribeSWNewNotice()
+    }
+    
+    private func fetchNoticesState() {
+        
     }
 }
 
@@ -64,6 +69,7 @@ extension TopicSubscriber {
         } else {
             unsubscribeTopic(topic)
         }
+        UserDefaults.standard.setSubscribingState(isSubscribing, ofTopic: topic)
     }
     
     private func subscribeTopic(_ topic: Topic) {
@@ -85,6 +91,32 @@ extension TopicSubscriber {
     }
 }
 
+// MARK: - Fetch Notices State from UserDefaults
+extension TopicSubscriber {
+    private func fetchSubscribingState() {
+        for topic in Topic.allCases {
+            fetchSubscribingState(ofTopic: topic)
+        }
+    }
+    
+    private func fetchSubscribingState(ofTopic topic: Topic) {
+        guard let state = UserDefaults.standard.isSubscribing(topic: topic) else {
+            setNoticeState(true, ofTopic: topic)
+            return
+        }
+        
+        setNoticeState(state, ofTopic: topic)
+    }
+    
+    private func setNoticeState(_ state: Bool, ofTopic topic: Topic) {
+        switch topic {
+            case .kwNewNotice: kwNewNotice = state
+            case .kwEditNotice: kwEditNotice = state
+            case .swNewNotice: swNewNotice = state
+        }
+    }
+}
+
 // MARK: - UserDefault extension method
 fileprivate extension UserDefaults {
     
@@ -93,5 +125,10 @@ fileprivate extension UserDefaults {
     /// - Returns: returns `Bool` if state exists(saved). returns `nil` when value is not exists.
     func isSubscribing(topic: Topic) -> Bool? {
         return self.object(forKey: topic.rawValue) as? Bool
+    }
+    
+    func setSubscribingState(_ state: Bool, ofTopic topic: Topic) {
+        self.set(state, forKey: topic.rawValue)
+        self.synchronize()
     }
 }
