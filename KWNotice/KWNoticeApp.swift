@@ -11,10 +11,12 @@ import SwiftUI
 struct KWNoticeApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var topicSubscriber = TopicSubscriber()
     
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(topicSubscriber)
         }
     }
 }

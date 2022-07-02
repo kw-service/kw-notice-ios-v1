@@ -10,7 +10,7 @@ import Combine
 import FirebaseCore
 import FirebaseMessaging
 
-final class TopicSubscriber {
+final class TopicSubscriber: ObservableObject {
     
     // MARK: - Properties
     @Published var kwNewNotice: Bool = true
@@ -21,8 +21,8 @@ final class TopicSubscriber {
     
     // MARK: - Methods
     init() {
+        fetchNoticesState()
         subscribeNoticesState()
-        fetchSubscribingState()
     }
     
     // MARK: - Privates
@@ -33,7 +33,7 @@ final class TopicSubscriber {
     }
     
     private func fetchNoticesState() {
-        
+        fetchSubscribingState()
     }
 }
 
@@ -77,6 +77,8 @@ extension TopicSubscriber {
             if let error = error {
                 print("topic subscribe failed with error: \(error.localizedDescription)")
                 // publish alert
+            } else {
+                print("start subscribing \(topic.rawValue)")
             }
         }
     }
@@ -86,6 +88,8 @@ extension TopicSubscriber {
             if let error = error {
                 print("topic unsubscribe failed with error: \(error.localizedDescription)")
                 // publish alert
+            } else {
+                print("end subscribing \(topic.rawValue)")
             }
         }
     }
