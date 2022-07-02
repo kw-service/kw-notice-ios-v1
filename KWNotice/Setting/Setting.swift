@@ -27,11 +27,3 @@ enum Setting: String {
         }
     }
 }
-
-extension AppStorage {    
-    init(_ key: Setting, store: UserDefaults? = nil) where Value == Bool {
-        let store = store ?? .standard
-        let value = store.bool(forKey: key.rawValue)
-        self.init(wrappedValue: value, key.rawValue, store: store)
-    }
-}
