@@ -10,9 +10,6 @@ import SwiftUI
 struct SettingView: View {
     
     // MARK: - Properties
-    @AppStorage(.kwNewNotice) private var kwNewNotice: Bool
-    @AppStorage(.kwEditNotice) private var kwEditNotice: Bool
-    @AppStorage(.swNewNotice) private var swNewNotice: Bool
     
     // MARK: - UI
     var body: some View {

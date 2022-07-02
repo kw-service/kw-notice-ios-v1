@@ -6,9 +6,23 @@
 //
 
 import Foundation
+import Combine
 import FirebaseCore
 import FirebaseMessaging
 
 final class TopicSubscriber {
     
+    // MARK: - Properties
+    @Published private(set) var kwNewNotice: Bool = true
+    @Published private(set) var kwEditNotice: Bool = true
+    @Published private(set) var swNewNotice: Bool = true
+    
+    // MARK: - Methods
+    init() {
+        fetchSubcribeState()
+    }
+    
+    private func fetchSubcribeState() {
+        
+    }
 }
