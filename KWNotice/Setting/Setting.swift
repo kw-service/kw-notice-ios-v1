@@ -15,6 +15,17 @@ enum Setting: String {
     
     static let githubURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
     static let appStoreURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
+    
+    func toTopic() -> String {
+        switch self {
+            case .kwNewNotice:
+                return "kw-home-new"
+            case .kwEditNotice:
+                return "kw-home-edit"
+            case .swNewNotice:
+                return "sw-central-new"
+        }
+    }
 }
 
 extension AppStorage {    
