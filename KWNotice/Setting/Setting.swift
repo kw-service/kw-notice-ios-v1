@@ -6,30 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
 
-enum Setting: String {
-    case kwNewNotice
-    case kwEditNotice
-    case swNewNotice
-    
+enum Setting {
     static let githubURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
     static let appStoreURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
-    
-    func toTopic() -> String {
-        switch self {
-            case .kwNewNotice:
-                return "kw-home-new"
-            case .kwEditNotice:
-                return "kw-home-edit"
-            case .swNewNotice:
-                return "sw-central-new"
-        }
-    }
-}
-
-extension UserDefaults {
-    func isSubscribing(topic: Setting) -> Bool? {
-        return self.object(forKey: topic.rawValue) as? Bool
-    }
 }
