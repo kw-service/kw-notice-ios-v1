@@ -27,3 +27,9 @@ enum Setting: String {
         }
     }
 }
+
+extension UserDefaults {
+    func isSubscribing(topic: Setting) -> Bool? {
+        return self.object(forKey: topic.rawValue) as? Bool
+    }
+}
