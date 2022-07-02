@@ -13,8 +13,8 @@ import FirebaseMessaging
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
-        Messaging.messaging().delegate = self
         UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(
@@ -29,7 +29,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        Messaging.messaging().apnsToken = deviceToken
+        Messaging.messaging().setAPNSToken(deviceToken, type: .unknown)
     }
 }
 
@@ -42,8 +42,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         print("Notification tapped: \(userInfo)")
         
-        guard let data = userInfo["data"] as? NSDictionary,
-              let urlString = data["url"] as? NSString,
+        guard let urlString = userInfo["url"] as? NSString,
               let url = URL(string: urlString as String) else {
             print("cannot parse url from UserInfo.")
             completionHandler()

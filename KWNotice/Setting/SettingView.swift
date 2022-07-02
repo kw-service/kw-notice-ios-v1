@@ -10,9 +10,7 @@ import SwiftUI
 struct SettingView: View {
     
     // MARK: - Properties
-    @AppStorage(.kwNewNotice) private var kwNewNotice: Bool
-    @AppStorage(.kwEditNotice) private var kwEditNotice: Bool
-    @AppStorage(.swNewNotice) private var swNewNotice: Bool
+    @EnvironmentObject var topicSubscriber: TopicSubscriber
     
     // MARK: - UI
     var body: some View {
@@ -43,8 +41,8 @@ extension SettingView {
     // MARK: - KW Notification
     @ViewBuilder
     func kwNotificationSettings() -> some View {
-        Toggle("새로운 공지사항 알림", isOn: $kwNewNotice)
-        Toggle("기존 공지사항 수정 알림", isOn: $kwEditNotice)
+        Toggle("새로운 공지사항 알림", isOn: $topicSubscriber.kwNewNotice)
+        Toggle("기존 공지사항 수정 알림", isOn: $topicSubscriber.kwEditNotice)
     }
     
     func kwNotificationHeader() -> some View {
@@ -55,7 +53,7 @@ extension SettingView {
     // MARK: - SW Notification
     @ViewBuilder
     func swNotificationSettings() -> some View {
-        Toggle("새로운 공지사항 알림", isOn: $swNewNotice)
+        Toggle("새로운 공지사항 알림", isOn: $topicSubscriber.swNewNotice)
     }
     
     func swNotificationHeader() -> some View {
