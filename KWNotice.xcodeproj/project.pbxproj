@@ -17,6 +17,7 @@
 		A57A2551286D7671002DB735 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2550286D7671002DB735 /* SettingView.swift */; };
 		A57A2553286D82F2002DB735 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2552286D82F2002DB735 /* Setting.swift */; };
 		A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C98239287054CF00B0080B /* TopicSubscriber.swift */; };
+		A5C9823C287058E800B0080B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9823B287058E800B0080B /* Topic.swift */; };
 		A5D4D76D286ECC5A0019F156 /* KWNoticeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5D4D770286ECC5A0019F156 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
 		A5D4D771286ECC5A0019F156 /* KWNoticeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,6 +62,7 @@
 		A57A2550286D7671002DB735 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		A57A2552286D82F2002DB735 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		A5C98239287054CF00B0080B /* TopicSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSubscriber.swift; sourceTree = "<group>"; };
+		A5C9823B287058E800B0080B /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWNoticeKit.h; sourceTree = "<group>"; };
 		A5E89934286D9E77009EE85E /* KWNotice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KWNotice.entitlements; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				A57A2550286D7671002DB735 /* SettingView.swift */,
 				A57A2552286D82F2002DB735 /* Setting.swift */,
 				A5C98239287054CF00B0080B /* TopicSubscriber.swift */,
+				A5C9823B287058E800B0080B /* Topic.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
+				A5C9823C287058E800B0080B /* Topic.swift in Sources */,
 				A57A2551286D7671002DB735 /* SettingView.swift in Sources */,
 				A57A2553286D82F2002DB735 /* Setting.swift in Sources */,
 				A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */,
