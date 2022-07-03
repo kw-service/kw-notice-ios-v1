@@ -14,10 +14,33 @@ class EndpointTest: XCTestCase {
     
     func test_Endpoint_createAsKWHome_shouldReturnsExpectedURL() {
         // Given
-        let type: Endpoint.Type = .kwHome
+        guard let expectedURL = URL(
+            string: "https://n6f11u33jf.execute-api.ap-northeast-2.amazonaws.com/v1/kw-home"
+        ) else {
+            XCTFail("fail to create URL instance.")
+            return
+        }
         
         // When
+        let url = Endpoint.create(.kwHome)
         
         // Then
+        XCTAssertEqual(expectedURL, url)
+    }
+    
+    func test_Endpoint_createAsSWCentral_shouldReturnsExpectedURL() {
+        // Given
+        guard let expectedURL = URL(
+            string: "https://n6f11u33jf.execute-api.ap-northeast-2.amazonaws.com/v1/sw-central"
+        ) else {
+            XCTFail("fail to create URL instance.")
+            return
+        }
+        
+        // When
+        let url = Endpoint.create(.swCentral)
+        
+        // Then
+        XCTAssertEqual(expectedURL, url)
     }
 }
