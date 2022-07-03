@@ -20,3 +20,14 @@ extension String {
         return result
     }
 }
+
+extension Date {
+    static func random() -> Date {
+        let year = Int.random(in: 1970...2023)
+        let month = Int.random(in: 1...12)
+        let day = Int.random(in: 1...28)
+        let component = DateComponents(year: year, month: month, day: day)
+        
+        return Calendar.current.date(from: component) ?? .now
+    }
+}
