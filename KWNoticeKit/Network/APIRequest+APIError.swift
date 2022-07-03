@@ -22,6 +22,8 @@ public final class APIRequest {
     private init() {}
     
     public func get(_ url: URL) -> AnyPublisher<Data, Error> {
+        print("requesting url: \(url)")
+        
         return URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { (data, response) -> Data in
                 guard let response = response as? HTTPURLResponse else {
