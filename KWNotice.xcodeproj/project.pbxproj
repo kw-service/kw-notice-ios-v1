@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
+		A576654A2871AB6B00725147 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest.swift */; };
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A57665492871AB6B00725147 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A57665482871AB4D00725147 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A57665492871AB6B00725147 /* APIRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A57A252D286D702E002DB735 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 				A5D4D779286ECCB90019F156 /* Model */,
 				A5D4D777286ECCB10019F156 /* Repository */,
 				A5D4D778286ECCB50019F156 /* DataStore */,
+				A57665482871AB4D00725147 /* Network */,
 				A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */,
 			);
 			path = KWNoticeKit;
@@ -264,6 +275,7 @@
 					};
 					A5D4D769286ECC5A0019F156 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -330,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A576654A2871AB6B00725147 /* APIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +474,7 @@
 		A57A2545286D702F002DB735 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KWNotice/KWNotice.entitlements;
@@ -492,6 +506,7 @@
 		A57A2546286D702F002DB735 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KWNotice/KWNotice.entitlements;
@@ -523,6 +538,7 @@
 		A5D4D773286ECC5A0019F156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -543,6 +559,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -553,6 +570,7 @@
 		A5D4D774286ECC5A0019F156 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
