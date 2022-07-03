@@ -31,3 +31,10 @@ extension Date {
         return Calendar.current.date(from: component) ?? .now
     }
 }
+
+extension URL {
+    static func random() -> URL {
+        let randomPath = String.random()
+        return URL(string: "https://www.example.com/random/\(randomPath)")!
+    }
+}
