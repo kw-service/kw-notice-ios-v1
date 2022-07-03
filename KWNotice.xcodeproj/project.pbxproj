@@ -15,6 +15,7 @@
 		A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657A2871B37600725147 /* KWHomeNotice.swift */; };
 		A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */; };
 		A57665802871B56800725147 /* KWHomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657F2871B56800725147 /* KWHomeDataStore.swift */; };
+		A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665822871B5E000725147 /* KWHomeRepositoryProtocol.swift */; };
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		A576657A2871B37600725147 /* KWHomeNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNotice.swift; sourceTree = "<group>"; };
 		A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeDataStoreProtocol.swift; sourceTree = "<group>"; };
 		A576657F2871B56800725147 /* KWHomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeDataStore.swift; sourceTree = "<group>"; };
+		A57665822871B5E000725147 /* KWHomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			children = (
 				A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */,
 				A576657F2871B56800725147 /* KWHomeDataStore.swift */,
+			);
+			path = KWHome;
+			sourceTree = "<group>";
+		};
+		A57665812871B5D500725147 /* KWHome */ = {
+			isa = PBXGroup;
+			children = (
+				A57665822871B5E000725147 /* KWHomeRepositoryProtocol.swift */,
 			);
 			path = KWHome;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 		A5D4D777286ECCB10019F156 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A57665812871B5D500725147 /* KWHome */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -440,6 +451,7 @@
 				A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */,
 				A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */,
 				A576654C2871ADDC00725147 /* Endpoint.swift in Sources */,
+				A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */,
 				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
