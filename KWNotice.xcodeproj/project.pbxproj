@@ -17,6 +17,9 @@
 		A57665802871B56800725147 /* KWHomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657F2871B56800725147 /* KWHomeDataStore.swift */; };
 		A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665822871B5E000725147 /* KWHomeRepositoryProtocol.swift */; };
 		A57665852871B7D900725147 /* KWHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665842871B7D900725147 /* KWHomeRepository.swift */; };
+		A57665882871BA5200725147 /* KWHomeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665872871BA5200725147 /* KWHomeRepositoryTest.swift */; };
+		A576658B2871BAA400725147 /* TestKWHomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */; };
+		A576658D2871BB9800725147 /* Random+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658C2871BB9800725147 /* Random+.swift */; };
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
@@ -77,6 +80,9 @@
 		A576657F2871B56800725147 /* KWHomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeDataStore.swift; sourceTree = "<group>"; };
 		A57665822871B5E000725147 /* KWHomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		A57665842871B7D900725147 /* KWHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeRepository.swift; sourceTree = "<group>"; };
+		A57665872871BA5200725147 /* KWHomeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeRepositoryTest.swift; sourceTree = "<group>"; };
+		A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKWHomeDataStore.swift; sourceTree = "<group>"; };
+		A576658C2871BB9800725147 /* Random+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Random+.swift"; sourceTree = "<group>"; };
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		A57665702871B20900725147 /* KWNoticeKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				A57665892871BA8500725147 /* TestExtensions */,
+				A57665862871BA3F00725147 /* RepositoryTests */,
 				A57665672871B0EF00725147 /* EndpointTests */,
 			);
 			path = KWNoticeKitTests;
@@ -164,6 +172,23 @@
 				A57665842871B7D900725147 /* KWHomeRepository.swift */,
 			);
 			path = KWHome;
+			sourceTree = "<group>";
+		};
+		A57665862871BA3F00725147 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A57665872871BA5200725147 /* KWHomeRepositoryTest.swift */,
+			);
+			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		A57665892871BA8500725147 /* TestExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */,
+				A576658C2871BB9800725147 /* Random+.swift */,
+			);
+			path = TestExtensions;
 			sourceTree = "<group>";
 		};
 		A57A252D286D702E002DB735 = {
@@ -426,6 +451,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A576658B2871BAA400725147 /* TestKWHomeDataStore.swift in Sources */,
+				A57665882871BA5200725147 /* KWHomeRepositoryTest.swift in Sources */,
+				A576658D2871BB9800725147 /* Random+.swift in Sources */,
 				A57665792871B21A00725147 /* EndpointTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
