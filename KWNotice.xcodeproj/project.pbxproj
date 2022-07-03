@@ -13,6 +13,7 @@
 		A57665732871B20900725147 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
 		A57665792871B21A00725147 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665692871B16B00725147 /* EndpointTest.swift */; };
 		A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657A2871B37600725147 /* KWHomeNotice.swift */; };
+		A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */; };
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		A57665692871B16B00725147 /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
 		A576656F2871B20900725147 /* KWNoticeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A576657A2871B37600725147 /* KWHomeNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNotice.swift; sourceTree = "<group>"; };
+		A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeDataStoreProtocol.swift; sourceTree = "<group>"; };
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 				A57665672871B0EF00725147 /* EndpointTests */,
 			);
 			path = KWNoticeKitTests;
+			sourceTree = "<group>";
+		};
+		A576657C2871B50100725147 /* KWHome */ = {
+			isa = PBXGroup;
+			children = (
+				A576657D2871B50E00725147 /* KWHomeDataStoreProtocol.swift */,
+			);
+			path = KWHome;
 			sourceTree = "<group>";
 		};
 		A57A252D286D702E002DB735 = {
@@ -235,6 +245,7 @@
 		A5D4D778286ECCB50019F156 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				A576657C2871B50100725147 /* KWHome */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -422,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */,
 				A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */,
 				A576654C2871ADDC00725147 /* Endpoint.swift in Sources */,
 				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
