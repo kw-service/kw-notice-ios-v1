@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
-		A576654A2871AB6B00725147 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest.swift */; };
+		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2539286D702E002DB735 /* KWNoticeApp.swift */; };
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A57665492871AB6B00725147 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A57A2536286D702E002DB735 /* KWNotice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWNotice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A2539286D702E002DB735 /* KWNoticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeApp.swift; sourceTree = "<group>"; };
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		A57665482871AB4D00725147 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A57665492871AB6B00725147 /* APIRequest.swift */,
+				A57665492871AB6B00725147 /* APIRequest+APIError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A576654A2871AB6B00725147 /* APIRequest.swift in Sources */,
+				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
