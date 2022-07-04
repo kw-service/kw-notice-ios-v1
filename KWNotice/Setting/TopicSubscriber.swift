@@ -84,7 +84,7 @@ extension TopicSubscriber {
     }
     
     private func unsubscribeTopic(_ topic: Topic) {
-        Messaging.messaging().subscribe(toTopic: topic.rawValue) { error in
+        Messaging.messaging().unsubscribe(fromTopic: topic.rawValue) { error in
             if let error = error {
                 print("topic unsubscribe failed with error: \(error.localizedDescription)")
                 // publish alert
