@@ -13,6 +13,8 @@ public final class SWCentralDataStore: SWCentralDataStoreProtocol {
     // MARK: - Properties
     
     // MARK: - Methods
+    public init() {}
+    
     public func fetch() -> AnyPublisher<[SWCentralNotice], Error> {
         let url = Endpoint.create(.swCentral)
         

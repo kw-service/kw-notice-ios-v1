@@ -13,6 +13,8 @@ public final class KWHomeDataStore: KWHomeDataStoreProtocol {
     // MARK: - Properties
     
     // MARK: - Methods
+    public init() {}
+    
     public func fetch() -> AnyPublisher<[KWHomeNotice], Error> {
         let url = Endpoint.create(.kwHome)
         
