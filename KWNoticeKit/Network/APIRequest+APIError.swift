@@ -34,6 +34,7 @@ public final class APIRequest {
                 }
                 return data
             }
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }
