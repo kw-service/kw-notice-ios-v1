@@ -129,4 +129,48 @@ class KWHomeRepositoryTest_Succeed: XCTestCase {
 
 class KWHomeRepositoryTest_Fail: XCTestCase {
     
+    var repository: KWHomeRepositoryProtocol!
+    var titles = [String]()
+    private var cancellable: AnyCancellable?
+    
+    override func setUp() {
+        super.setUp()
+        
+        for _ in 0..<Int.random(in: 100...1000) {
+            titles.append(.random(100))
+        }
+        
+        let dataStore = TestKWHomeDataStore(titles, isSucceedCase: false)
+        self.repository = KWHomeRepository(dataStore: dataStore)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        self.cancellable?.cancel()
+        
+        self.repository = nil
+        self.cancellable = nil
+    }
+    
+    func test_KWHomeRepository_fetch_shouldFinishedWithError() {
+        // Given
+        let expectation = XCTestExpectation(description: #function)
+        
+        // When
+        cancellable = repository.fetch()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                    case .failure:
+                        expectation.fulfill()
+                    case .finished:
+                        XCTFail("test must failed with error.")
+                }
+            }, receiveValue: { receivedNotificaion in
+                XCTFail("failed with receive value - \(receivedNotificaion)")
+            })
+        
+        // Then
+        wait(for: [expectation], timeout: 1)
+    }
 }
