@@ -34,6 +34,7 @@
 		A5B8C09028727F200042E3C5 /* SWCentralRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C08F28727F200042E3C5 /* SWCentralRepositoryProtocol.swift */; };
 		A5B8C09228727F6C0042E3C5 /* SWCentralRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09128727F6C0042E3C5 /* SWCentralRepository.swift */; };
 		A5B8C09428727FFE0042E3C5 /* TestSWCentralDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */; };
+		A5B8C096287280990042E3C5 /* SWCentralRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */; };
 		A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C98239287054CF00B0080B /* TopicSubscriber.swift */; };
 		A5C9823C287058E800B0080B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9823B287058E800B0080B /* Topic.swift */; };
 		A5D4D76D286ECC5A0019F156 /* KWNoticeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +105,7 @@
 		A5B8C08F28727F200042E3C5 /* SWCentralRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralRepositoryProtocol.swift; sourceTree = "<group>"; };
 		A5B8C09128727F6C0042E3C5 /* SWCentralRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralRepository.swift; sourceTree = "<group>"; };
 		A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSWCentralDataStore.swift; sourceTree = "<group>"; };
+		A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralRepositoryTest.swift; sourceTree = "<group>"; };
 		A5C98239287054CF00B0080B /* TopicSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSubscriber.swift; sourceTree = "<group>"; };
 		A5C9823B287058E800B0080B /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				A57665872871BA5200725147 /* KWHomeRepositoryTest.swift */,
+				A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */,
 			);
 			path = RepositoryTests;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				A576658B2871BAA400725147 /* TestKWHomeDataStore.swift in Sources */,
 				A57665882871BA5200725147 /* KWHomeRepositoryTest.swift in Sources */,
 				A576658D2871BB9800725147 /* Random+.swift in Sources */,
+				A5B8C096287280990042E3C5 /* SWCentralRepositoryTest.swift in Sources */,
 				A5B8C09428727FFE0042E3C5 /* TestSWCentralDataStore.swift in Sources */,
 				A57665792871B21A00725147 /* EndpointTest.swift in Sources */,
 			);
