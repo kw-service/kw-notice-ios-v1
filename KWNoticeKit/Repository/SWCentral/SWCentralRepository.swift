@@ -19,7 +19,6 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
     }
     
     public func fetch() -> AnyPublisher<[SWCentralNotice], Error> {
-        return Result.Publisher([])
-            .eraseToAnyPublisher()
+        return dataStore.fetch()
     }
 }
