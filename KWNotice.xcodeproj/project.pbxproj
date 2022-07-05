@@ -15,6 +15,7 @@
 		A54EC21A28741DF100FF03E1 /* TestKWHomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */; };
 		A54EC21B28741DF400FF03E1 /* TestSWCentralDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */; };
 		A54EC21D28741DFF00FF03E1 /* Random+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658C2871BB9800725147 /* Random+.swift */; };
+		A54EC22028743F4E00FF03E1 /* SWCentralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC21F28743F4E00FF03E1 /* SWCentralViewModel.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
@@ -99,6 +100,7 @@
 		A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeView.swift; sourceTree = "<group>"; };
 		A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPublishableObject.swift; sourceTree = "<group>"; };
 		A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModelTest.swift; sourceTree = "<group>"; };
+		A54EC21F28743F4E00FF03E1 /* SWCentralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralViewModel.swift; sourceTree = "<group>"; };
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -214,6 +216,14 @@
 				A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A54EC21E28743F3F00FF03E1 /* SWCentralNotice */ = {
+			isa = PBXGroup;
+			children = (
+				A54EC21F28743F4E00FF03E1 /* SWCentralViewModel.swift */,
+			);
+			path = SWCentralNotice;
 			sourceTree = "<group>";
 		};
 		A57665482871AB4D00725147 /* Network */ = {
@@ -334,6 +344,7 @@
 			children = (
 				A57A254A286D7656002DB735 /* NoticeView.swift */,
 				A54EC211287402C800FF03E1 /* KWHomeNotice */,
+				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -629,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54EC22028743F4E00FF03E1 /* SWCentralViewModel.swift in Sources */,
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
 				A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */,
 				A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */,
