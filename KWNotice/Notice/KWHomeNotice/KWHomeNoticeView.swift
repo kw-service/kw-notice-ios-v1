@@ -18,8 +18,8 @@ struct KWHomeNoticeView: View {
                 contentCell(by: notice.wrappedValue)
             }
         }
-        .onAppear {
-            viewModel.fetch()
+        .task {
+            await viewModel.fetch()
         }
     }
     

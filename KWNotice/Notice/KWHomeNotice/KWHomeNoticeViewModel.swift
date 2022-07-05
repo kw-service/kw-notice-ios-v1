@@ -24,7 +24,7 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     private var cancellable: AnyCancellable?
     
     // MARK: - Methods
-    func fetch() {
+    func fetch() async {
         
     }
     
