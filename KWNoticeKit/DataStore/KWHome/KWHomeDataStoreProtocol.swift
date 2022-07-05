@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import Combine
 
 public protocol KWHomeDataStoreProtocol {
-    func fetch() -> AnyPublisher<[KWHomeNotice], Error>
+    func fetch() async throws -> [KWHomeNotice]
 }

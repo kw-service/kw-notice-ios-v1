@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 public final class KWHomeDataStore: KWHomeDataStoreProtocol {
     
@@ -15,11 +14,16 @@ public final class KWHomeDataStore: KWHomeDataStoreProtocol {
     // MARK: - Methods
     public init() {}
     
-    public func fetch() -> AnyPublisher<[KWHomeNotice], Error> {
+    public func fetch() async throws -> [KWHomeNotice] {
         let url = Endpoint.create(.kwHome)
         
-        return APIRequest.shared.get(url)
-            .decode(type: [KWHomeNotice].self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
+        let response = try await APIRequest.shared.get(url)
+        guard let decodedValue = try? JSONDecoder().decode(
+            [KWHomeNotice].self,
+            from: response
+        ) else {
+            throw APIError.decodeError
+        }
+        return decodedValue
     }
 }

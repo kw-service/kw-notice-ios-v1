@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 public final class SWCentralDataStore: SWCentralDataStoreProtocol {
     
@@ -15,11 +14,16 @@ public final class SWCentralDataStore: SWCentralDataStoreProtocol {
     // MARK: - Methods
     public init() {}
     
-    public func fetch() -> AnyPublisher<[SWCentralNotice], Error> {
+    public func fetch() async throws -> [SWCentralNotice] {
         let url = Endpoint.create(.swCentral)
         
-        return APIRequest.shared.get(url)
-            .decode(type: [SWCentralNotice].self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
+        let response = try await APIRequest.shared.get(url)
+        guard let decodedValue = try? JSONDecoder().decode(
+            [SWCentralNotice].self,
+            from: response
+        ) else {
+            throw APIError.decodeError
+        }
+        return decodedValue
     }
 }
