@@ -33,7 +33,7 @@ struct NoticeView: View {
             case .kwHome:
                 return AnyView(KWHomeNoticeView())
             case .swCentral:
-                return AnyView(Text("SW Central"))
+                return AnyView(SWCentralNoticeView())
         }
     }
     

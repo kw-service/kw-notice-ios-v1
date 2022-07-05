@@ -51,6 +51,7 @@
 		A5D4D770286ECC5A0019F156 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
 		A5D4D771286ECC5A0019F156 /* KWNoticeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5E2B9CA28746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B9C928746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift */; };
+		A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */; };
 		A5E89931286D9CA2009EE85E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89930286D9CA2009EE85E /* FirebaseAnalytics */; };
 		A5E89933286D9CA2009EE85E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89932286D9CA2009EE85E /* FirebaseMessaging */; };
 		A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89936286D9EFE009EE85E /* AppDelegate.swift */; };
@@ -137,6 +138,7 @@
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWNoticeKit.h; sourceTree = "<group>"; };
 		A5E2B9C928746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeViewModelTest.swift; sourceTree = "<group>"; };
+		A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeView.swift; sourceTree = "<group>"; };
 		A5E89934286D9E77009EE85E /* KWNotice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KWNotice.entitlements; sourceTree = "<group>"; };
 		A5E89935286D9E90009EE85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A5E89936286D9EFE009EE85E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A54EC21F28743F4E00FF03E1 /* SWCentralNoticeViewModel.swift */,
+				A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */,
 			);
 			path = SWCentralNotice;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				A57A2551286D7671002DB735 /* SettingView.swift in Sources */,
 				A57A2553286D82F2002DB735 /* Setting.swift in Sources */,
 				A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */,
+				A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */,
 				A57A254B286D7656002DB735 /* NoticeView.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
