@@ -10,14 +10,14 @@ import Foundation
 public struct SWCentralNotice: Decodable {
     public let id: Int
     public let title: String
-    public let postedDate: Date
+//    public let postedDate: Date
     public let url: URL
     public let type: String
-    public let crawledTime: Date
+//    public let crawledTime: Date
     
     enum CodingKeys: String, CodingKey {
         case id, title, url, type
-        case postedDate = "posted_date"
-        case crawledTime = "crawled_time"
+//        case postedDate = "posted_date"
+//        case crawledTime = "crawled_time"
     }
 }

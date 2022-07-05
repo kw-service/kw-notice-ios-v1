@@ -26,19 +26,12 @@ class TestKWHomeDataStore: KWHomeDataStoreProtocol {
         self.isSucceedCase = isSucceedCase
     }
     
-    func fetch() -> AnyPublisher<[KWHomeNotice], Error> {
-        return Future { [weak self] promise in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                guard let self = self else {
-                    promise(.failure(APIError.invalidResponse))
-                    return
-                }
-                let result: Result<[KWHomeNotice], Error> = (self.isSucceedCase) ?
-                    .success(self.notices) : .failure(APIError.invalidCode(code: 500))
-                promise(result)
-            }
+    func fetch() async throws -> [KWHomeNotice] {
+        if isSucceedCase {
+            return notices
+        } else {
+            throw APIError.invalidResponse
         }
-        .eraseToAnyPublisher()
     }
 }
 
@@ -58,12 +51,12 @@ fileprivate extension KWHomeNotice {
             id: id,
             title: title,
             tag: tag,
-            postedDate: postedDate,
-            modifiedDate: modifiedDate,
+//            postedDate: postedDate,
+//            modifiedDate: modifiedDate,
             department: department,
             url: url,
-            type: type,
-            crawledTime: crawledTime
+            type: type
+//            crawledTime: crawledTime
         )
     }
 }

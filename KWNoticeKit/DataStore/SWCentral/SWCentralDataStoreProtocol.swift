@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import Combine
 
 public protocol SWCentralDataStoreProtocol {
-    func fetch() -> AnyPublisher<[SWCentralNotice], Error>
+    func fetch() async throws -> [SWCentralNotice]
 }

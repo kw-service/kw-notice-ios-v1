@@ -9,6 +9,6 @@ import Foundation
 import Combine
 
 public protocol KWHomeRepositoryProtocol {
-    func fetch() -> AnyPublisher<[KWHomeNotice], Error>
-    func search(text: String) -> AnyPublisher<[KWHomeNotice], Never>
+    func fetch() async throws -> [KWHomeNotice]
+    func search(text: String) -> [KWHomeNotice]
 }
