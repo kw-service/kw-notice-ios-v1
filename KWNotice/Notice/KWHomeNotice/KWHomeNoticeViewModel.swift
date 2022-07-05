@@ -19,7 +19,7 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     private var cancellable: AnyCancellable?
     
     // MARK: - Methods
-    func fetch() async {
+    @Sendable func fetch() async {
         do {
             notices = try await repository.fetch()
         } catch {
