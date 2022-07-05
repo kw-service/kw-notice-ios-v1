@@ -31,7 +31,7 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
         viewModel = KWHomeNoticeViewModel()
     }
     
-    func test_KWHomeViewModel_fetch_shouldSetNoticesPublisherByGivenNotices() async {
+    func test_KWHomeViewModel_fetch_shouldSetNoticesByGivenNotices() async {
         // Given
         
         // When
@@ -42,7 +42,7 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
         XCTAssertEqual(titles, notices.map { $0.title })
     }
     
-    func test_KWHomeViewModel_search_shouldSetNoticesPublisherByGivenNoticesContainSearchTitle() async {
+    func test_KWHomeViewModel_search_shouldSetNoticesByGivenNoticesContainSearchTitle() async {
         // Given
         await viewModel.fetch()
         
@@ -56,7 +56,6 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
 }
 
 class KWHomeNoticeViewModelTest_FailCase: XCTestCase {
-    
     
     var viewModel: KWHomeNoticeViewModel!
     var titles = [String]()
