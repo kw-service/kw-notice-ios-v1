@@ -32,12 +32,27 @@ extension KWNoticeApp {
     }
     
     func configureNoticeDependency() {
+        configureKWHomeDependency()
+        configureSWCentralDependency()
+    }
+    
+    func configureKWHomeDependency() {
         DependencyContainer.shared.register(type: KWHomeDataStoreProtocol.self) { _ in
             KWHomeDataStore()
         }
         
         DependencyContainer.shared.register(type: KWHomeRepositoryProtocol.self) { r in
             KWHomeRepository(dataStore: r.resolve() ?? KWHomeDataStore())
+        }
+    }
+    
+    func configureSWCentralDependency() {
+        DependencyContainer.shared.register(type: SWCentralDataStoreProtocol.self) { _ in
+            SWCentralDataStore()
+        }
+        
+        DependencyContainer.shared.register(type: SWCentralRepositoryProtocol.self) { r in
+            SWCentralRepository(dataStore: r.resolve() ?? SWCentralDataStore())
         }
     }
 }
