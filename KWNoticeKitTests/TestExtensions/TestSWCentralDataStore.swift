@@ -26,19 +26,12 @@ class TestSWCentralDataStore: SWCentralDataStoreProtocol {
         self.isSucceedCase = isSucceedCase
     }
     
-    func fetch() -> AnyPublisher<[SWCentralNotice], Error> {
-        return Future { [weak self] promise in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                guard let self = self else {
-                    promise(.failure(APIError.invalidResponse))
-                    return
-                }
-                let result: Result<[SWCentralNotice], Error> = (self.isSucceedCase) ?
-                    .success(self.notices) : .failure(APIError.invalidCode(code: 500))
-                promise(result)
-            }
+    func fetch() async throws -> [SWCentralNotice] {
+        if isSucceedCase {
+            return notices
+        } else {
+            throw APIError.invalidResponse
         }
-        .eraseToAnyPublisher()
     }
 }
 
@@ -54,10 +47,10 @@ fileprivate extension SWCentralNotice {
         return .init(
             id: id,
             title: title,
-            postedDate: postedDate,
+//            postedDate: postedDate,
             url: url,
-            type: type,
-            crawledTime: crawledTime
+            type: type
+//            crawledTime: crawledTime
         )
     }
 }
