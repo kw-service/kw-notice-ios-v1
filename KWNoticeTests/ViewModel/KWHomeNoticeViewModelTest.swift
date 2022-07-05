@@ -33,42 +33,24 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
     
     func test_KWHomeViewModel_fetch_shouldSetNoticesPublisherByGivenNotices() async {
         // Given
-        let expectation = XCTestExpectation(description: #function)
         
         // When
-        var notices = [KWHomeNotice]()
-        viewModel.$notices
-            .sink(receiveValue: { receivedNotices in
-                notices = receivedNotices
-                expectation.fulfill()
-            })
-            .store(in: &cancellables)
-        
         await viewModel.fetch()
+        let notices = await viewModel.notices
         
         // Then
-        wait(for: [expectation], timeout: 1)
         XCTAssertEqual(titles, notices.map { $0.title })
     }
     
     func test_KWHomeViewModel_search_shouldSetNoticesPublisherByGivenNoticesContainSearchTitle() async {
         // Given
-        let expectation = XCTestExpectation(description: #function)
         await viewModel.fetch()
         
         // When
-        var notices = [KWHomeNotice]()
-        viewModel.$notices
-            .sink(receiveValue: { receivedNotices in
-                notices = receivedNotices
-                expectation.fulfill()
-            })
-            .store(in: &cancellables)
-        
-        viewModel.search(text: searchTitle)
+        await viewModel.search(text: searchTitle)
+        let notices = await viewModel.notices
         
         // Then
-        wait(for: [expectation], timeout: 1)
         XCTAssertGreaterThanOrEqual(notices.count, searchTargetCount)
     }
 }
