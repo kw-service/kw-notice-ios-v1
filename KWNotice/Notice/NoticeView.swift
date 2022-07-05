@@ -17,17 +17,15 @@ struct NoticeView: View {
     
     @State private var presentedView: Views = .kwHome
     
+    init() {
+        UISegmentedControl.appearance().backgroundColor = .tertiarySystemBackground
+    }
+    
     var body: some View {
-        VStack {
-            Picker("picker", selection: $presentedView) {
-                Text(Views.kwHome.rawValue).tag(Views.kwHome)
-                Text(Views.swCentral.rawValue).tag(Views.swCentral)
-            }
-            .pickerStyle(.segmented)
-            .padding()
-            
+        ZStack() {
             contentView()
         }
+        .overlay(viewPicker, alignment: .bottom)
     }
     
     func contentView() -> AnyView {
@@ -37,6 +35,17 @@ struct NoticeView: View {
             case .swCentral:
                 return AnyView(Text("SW Central"))
         }
+    }
+    
+    var viewPicker: some View {
+        Picker("picker", selection: $presentedView) {
+            Text(Views.kwHome.rawValue).tag(Views.kwHome)
+            Text(Views.swCentral.rawValue).tag(Views.swCentral)
+        }
+        .opacity(1)
+        .pickerStyle(.segmented)
+        .padding()
+        .shadow(color: .gray.opacity(0.5), radius: 3, x: 2, y: 2)
     }
 }
 
