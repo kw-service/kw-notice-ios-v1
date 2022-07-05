@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SWCentralNotice: Decodable {
+public struct SWCentralNotice: Identifiable, Decodable {
     public let id: Int
     public let title: String
 //    public let postedDate: Date

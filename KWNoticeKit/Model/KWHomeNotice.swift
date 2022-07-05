@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct KWHomeNotice: Decodable {
+public struct KWHomeNotice: Identifiable, Decodable {
     public let id: Int
     public let title: String
     public let tag: String
