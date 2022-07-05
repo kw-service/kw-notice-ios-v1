@@ -11,6 +11,10 @@
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
 		A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */; };
+		A54EC21928741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */; };
+		A54EC21A28741DF100FF03E1 /* TestKWHomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */; };
+		A54EC21B28741DF400FF03E1 /* TestSWCentralDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */; };
+		A54EC21D28741DFF00FF03E1 /* Random+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658C2871BB9800725147 /* Random+.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
@@ -94,6 +98,7 @@
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
 		A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeView.swift; sourceTree = "<group>"; };
 		A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPublishableObject.swift; sourceTree = "<group>"; };
+		A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModelTest.swift; sourceTree = "<group>"; };
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 		A54EC1F42873D87500FF03E1 /* KWNoticeTests */ = {
 			isa = PBXGroup;
 			children = (
+				A54EC21728741DCF00FF03E1 /* ViewModel */,
 				A54EC1FC2873D89900FF03E1 /* Dependency */,
 			);
 			path = KWNoticeTests;
@@ -200,6 +206,14 @@
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A54EC21728741DCF00FF03E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A57665482871AB4D00725147 /* Network */ = {
@@ -590,7 +604,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54EC21A28741DF100FF03E1 /* TestKWHomeDataStore.swift in Sources */,
+				A54EC21D28741DFF00FF03E1 /* Random+.swift in Sources */,
+				A54EC21B28741DF400FF03E1 /* TestSWCentralDataStore.swift in Sources */,
 				A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */,
+				A54EC21928741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
