@@ -11,8 +11,8 @@ import Combine
 public final class KWHomeRepository: KWHomeRepositoryProtocol {
     
     // MARK: - Properties
-    private var notices = [KWHomeNotice]()
     private let dataStore: KWHomeDataStoreProtocol
+    private var notices = [KWHomeNotice]()
     
     // MARK: - Methods
     public init(dataStore: KWHomeDataStoreProtocol) {
@@ -20,10 +20,11 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
     }
     
     public func fetch() async throws -> [KWHomeNotice] {
-        throw APIError.invalidResponse
+        notices = try await dataStore.fetch()
+        return notices
     }
     
     public func search(text: String) -> [KWHomeNotice] {
-        return []
+        return notices.filter { $0.title.contains(text) }
     }
 }

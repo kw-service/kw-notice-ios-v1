@@ -12,6 +12,7 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
     
     // MARK: - Properties
     private let dataStore: SWCentralDataStoreProtocol
+    private var notices = [SWCentralNotice]()
     
     // MARK: - Methods
     public init(dataStore: SWCentralDataStoreProtocol) {
@@ -19,10 +20,11 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
     }
     
     public func fetch() async throws -> [SWCentralNotice] {
-        throw APIError.invalidResponse
+        notices = try await dataStore.fetch()
+        return notices
     }
     
     public func search(text: String) -> [SWCentralNotice] {
-        return []
+        return notices.filter { $0.title.contains(text) }
     }
 }

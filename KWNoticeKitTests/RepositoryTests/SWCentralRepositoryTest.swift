@@ -18,9 +18,9 @@ class SWCentralRepositoryTest_Succeed: XCTestCase {
     override func setUp() async throws {
         try await super.setUp()
         
-        let baseSearchTitle = String.random(3)
+        searchTitle = String.random(3)
         for i in 0..<Int.random(in: 100...1000) {
-            titles.append(i % 3 == 0 ? baseSearchTitle + .random(100) : .random(100))
+            titles.append(i % 3 == 0 ? searchTitle + .random(100) : .random(100))
             if i % 3 == 0 { searchTargetCount += 1 }
         }
         
@@ -44,8 +44,9 @@ class SWCentralRepositoryTest_Succeed: XCTestCase {
         XCTAssertEqual(receivedNotices.map { $0.title }, titles)
     }
     
-    func test_SWCentralRepository_search_shouldReturnNoticesContainSearchTitle() {
+    func test_SWCentralRepository_search_shouldReturnNoticesContainSearchTitle_afterFetch() async throws {
         // Given
+        let _ = try await repository.fetch()
         
         // When
         let receivedNotices = repository.search(text: searchTitle)
