@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A54EC1F62873D87500FF03E1 /* KWNoticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1F52873D87500FF03E1 /* KWNoticeTests.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
@@ -47,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A54EC1F72873D87500FF03E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A57A252E286D702E002DB735 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A57A2535286D702E002DB735;
+			remoteInfo = KWNotice;
+		};
 		A57665742871B20900725147 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A57A252E286D702E002DB735 /* Project object */;
@@ -78,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54EC1F52873D87500FF03E1 /* KWNoticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWNoticeTests.swift; sourceTree = "<group>"; };
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -118,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A54EC1F02873D87500FF03E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A576656C2871B20900725147 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +163,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A54EC1F42873D87500FF03E1 /* KWNoticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A54EC1F52873D87500FF03E1 /* KWNoticeTests.swift */,
+			);
+			path = KWNoticeTests;
+			sourceTree = "<group>";
+		};
 		A57665482871AB4D00725147 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A57A2538286D702E002DB735 /* KWNotice */,
+				A54EC1F42873D87500FF03E1 /* KWNoticeTests */,
 				A5D4D76B286ECC5A0019F156 /* KWNoticeKit */,
 				A57665702871B20900725147 /* KWNoticeKitTests */,
 				A57A2537286D702E002DB735 /* Products */,
@@ -225,6 +251,7 @@
 				A57A2536286D702E002DB735 /* KWNotice.app */,
 				A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */,
 				A576656F2871B20900725147 /* KWNoticeKitTests.xctest */,
+				A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,6 +390,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A54EC1F22873D87500FF03E1 /* KWNoticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54EC1FB2873D87500FF03E1 /* Build configuration list for PBXNativeTarget "KWNoticeTests" */;
+			buildPhases = (
+				A54EC1EF2873D87500FF03E1 /* Sources */,
+				A54EC1F02873D87500FF03E1 /* Frameworks */,
+				A54EC1F12873D87500FF03E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A54EC1F82873D87500FF03E1 /* PBXTargetDependency */,
+			);
+			name = KWNoticeTests;
+			productName = KWNoticeTests;
+			productReference = A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A576656E2871B20900725147 /* KWNoticeKitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A57665762871B20900725147 /* Build configuration list for PBXNativeTarget "KWNoticeKitTests" */;
@@ -432,6 +477,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					A54EC1F22873D87500FF03E1 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = A57A2535286D702E002DB735;
+					};
 					A576656E2871B20900725147 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -463,11 +512,19 @@
 				A57A2535286D702E002DB735 /* KWNotice */,
 				A5D4D769286ECC5A0019F156 /* KWNoticeKit */,
 				A576656E2871B20900725147 /* KWNoticeKitTests */,
+				A54EC1F22873D87500FF03E1 /* KWNoticeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A54EC1F12873D87500FF03E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A576656D2871B20900725147 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +552,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A54EC1EF2873D87500FF03E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54EC1F62873D87500FF03E1 /* KWNoticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A576656B2871B20900725147 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +612,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A54EC1F82873D87500FF03E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A57A2535286D702E002DB735 /* KWNotice */;
+			targetProxy = A54EC1F72873D87500FF03E1 /* PBXContainerItemProxy */;
+		};
 		A57665752871B20900725147 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A5D4D769286ECC5A0019F156 /* KWNoticeKit */;
@@ -560,6 +630,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A54EC1F92873D87500FF03E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTB6BR222W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Harry.KWNoticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KWNotice.app/KWNotice";
+			};
+			name = Debug;
+		};
+		A54EC1FA2873D87500FF03E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTB6BR222W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Harry.KWNoticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KWNotice.app/KWNotice";
+			};
+			name = Release;
+		};
 		A57665772871B20900725147 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -836,6 +942,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A54EC1FB2873D87500FF03E1 /* Build configuration list for PBXNativeTarget "KWNoticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54EC1F92873D87500FF03E1 /* Debug */,
+				A54EC1FA2873D87500FF03E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A57665762871B20900725147 /* Build configuration list for PBXNativeTarget "KWNoticeKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -2,7 +2,7 @@
 //  KWNoticeTests.swift
 //  KWNoticeTests
 //
-//  Created by 김세영 on 2022/07/03.
+//  Created by 김세영 on 2022/07/05.
 //
 
 import XCTest
