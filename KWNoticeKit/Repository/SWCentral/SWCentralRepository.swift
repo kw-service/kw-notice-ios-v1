@@ -25,6 +25,7 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
     }
     
     public func search(text: String) -> [SWCentralNotice] {
-        return notices.filter { $0.title.contains(text) }
+        if text.isEmpty { return notices }
+        else { return notices.filter { $0.title.contains(text) } }
     }
 }
