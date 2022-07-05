@@ -20,26 +20,25 @@ final class DependencyContainer {
         return String(describing: type.self)
     }
     
-    func register<T>(_ resolver: (DependencyContainer) -> T) {
+    func register<T>(type: T.Type, _ resolver: (DependencyContainer) -> T) {
         let instance = resolver(self)
-        dependencies[getKey(of: T.self)] = instance
+        dependencies[getKey(of: type)] = instance
     }
     
-    func resolve<T>() -> T? {
+    func resolve<T>() -> T {
         guard let instance = dependencies[getKey(of: T.self)] as? T else {
-            print("dependency container: cannot find instance of type \(T.self).")
-            return nil
+            preconditionFailure("dependency container: cannot find instance of type \(T.self).")
         }
         return instance
     }
 }
 
 @propertyWrapper
-class Inject<T> {
+class Resolve<T> {
     
     var wrappedValue: T
     
-    init(wrappedValue: T) {
-        self.wrappedValue = DependencyContainer.shared.resolve() ?? wrappedValue
+    init() {
+        self.wrappedValue = DependencyContainer.shared.resolve()
     }
 }
