@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 public protocol SWCentralRepositoryProtocol {
-    func fetch() -> AnyPublisher<[SWCentralNotice], Error>
+    func fetch() async throws -> [SWCentralNotice]
+    func search(text: String) -> [SWCentralNotice]
 }

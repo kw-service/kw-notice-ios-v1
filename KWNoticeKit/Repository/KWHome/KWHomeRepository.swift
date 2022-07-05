@@ -19,19 +19,11 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
         self.dataStore = dataStore
     }
     
-    public func fetch() -> AnyPublisher<[KWHomeNotice], Error> {
-        return dataStore.fetch()
-            .map { [weak self] notices -> [KWHomeNotice] in
-                self?.notices = notices
-                return notices
-            }
-            .eraseToAnyPublisher()
+    public func fetch() async throws -> [KWHomeNotice] {
+        throw APIError.invalidResponse
     }
     
-    public func search(text: String) -> AnyPublisher<[KWHomeNotice], Never> {
-        let resultNotices = notices.filter { $0.title.contains(text) }
-        
-        return Just(resultNotices)
-            .eraseToAnyPublisher()
+    public func search(text: String) -> [KWHomeNotice] {
+        return []
     }
 }

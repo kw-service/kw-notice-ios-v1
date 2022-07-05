@@ -18,7 +18,11 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
         self.dataStore = dataStore
     }
     
-    public func fetch() -> AnyPublisher<[SWCentralNotice], Error> {
-        return dataStore.fetch()
+    public func fetch() async throws -> [SWCentralNotice] {
+        throw APIError.invalidResponse
+    }
+    
+    public func search(text: String) -> [SWCentralNotice] {
+        return []
     }
 }
