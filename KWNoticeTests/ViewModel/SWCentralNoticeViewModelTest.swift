@@ -55,6 +55,18 @@ class SWCentralNoticeViewModelTest_SucceedCase: XCTestCase {
         // Then
         XCTAssertGreaterThanOrEqual(notices.count, searchTargetCount)
     }
+    
+    func test_SWCentralViewModel_searchWithEmptyString_shouldReturnGivenNotices() async {
+        // Given
+        await viewModel.fetch()
+        
+        // When
+        await viewModel.search(text: "")
+        let notices = await viewModel.notices
+        
+        // Then
+        XCTAssertEqual(notices.map { $0.title }, titles)
+    }
 }
 
 class SWCentralNoticeViewModelTest_FailCase: XCTestCase {
