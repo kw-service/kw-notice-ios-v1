@@ -33,3 +33,13 @@ final class DependencyContainer {
         return instance
     }
 }
+
+@propertyWrapper
+class Inject<T> {
+    
+    var wrappedValue: T
+    
+    init(wrappedValue: T) {
+        self.wrappedValue = DependencyContainer.shared.resolve() ?? wrappedValue
+    }
+}
