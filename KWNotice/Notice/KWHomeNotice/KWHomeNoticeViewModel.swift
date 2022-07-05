@@ -19,10 +19,14 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     // MARK: - Methods
     func fetch() async {
-        
+        do {
+            notices = try await repository.fetch()
+        } catch {
+            sendAlert()
+        }
     }
     
     func search(text: String) {
-        
+        notices = repository.search(text: text)
     }
 }
