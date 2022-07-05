@@ -18,6 +18,9 @@ struct KWHomeNoticeView: View {
                 contentCell(by: notice.wrappedValue)
             }
         }
+        .refreshable {
+            await viewModel.fetch()
+        }
         .task {
             await viewModel.fetch()
         }

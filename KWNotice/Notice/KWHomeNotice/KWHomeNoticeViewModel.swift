@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import KWNoticeKit
 
+@MainActor
 final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     // MARK: - Properties
