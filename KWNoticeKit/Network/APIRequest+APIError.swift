@@ -21,20 +21,20 @@ public final class APIRequest {
     // MARK: - Methods
     private init() {}
     
-    public func get(_ url: URL) -> AnyPublisher<Data, Error> {
+    public func get(_ url: URL) async throws -> Data {
         print("requesting url: \(url)")
         
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap { (data, response) -> Data in
-                guard let response = response as? HTTPURLResponse else {
-                    throw APIError.invalidResponse
-                }
-                guard (200..<300).contains(response.statusCode) else {
-                    throw APIError.invalidCode(code: response.statusCode)
-                }
-                return data
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let response = response as? HTTPURLResponse else {
+                throw APIError.invalidResponse
             }
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
+            guard (200..<300).contains(response.statusCode) else {
+                throw APIError.invalidCode(code: response.statusCode)
+            }
+            return data
+        } catch {
+            throw APIError.invalidResponse
+        }
     }
 }
