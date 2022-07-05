@@ -1,5 +1,5 @@
 //
-//  SWCentralViewModel.swift
+//  SWCentralNoticeViewModel.swift
 //  KWNotice
 //
 //  Created by 김세영 on 2022/07/05.
@@ -9,7 +9,7 @@ import Foundation
 import KWNoticeKit
 
 @MainActor
-final class SWCentralViewModel: AlertPublishableObject, ObservableObject {
+final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     // MARK: - Properties
     @Resolve private var repository: SWCentralRepositoryProtocol
