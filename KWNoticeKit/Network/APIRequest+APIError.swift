@@ -11,6 +11,7 @@ import Combine
 public enum APIError: Error {
     case invalidResponse
     case invalidCode(code: Int)
+    case decodeError
 }
 
 public final class APIRequest {
