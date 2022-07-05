@@ -45,7 +45,6 @@ struct NoticeView: View {
         .opacity(1)
         .pickerStyle(.segmented)
         .padding()
-        .shadow(color: .gray.opacity(0.5), radius: 3, x: 2, y: 2)
     }
 }
 
