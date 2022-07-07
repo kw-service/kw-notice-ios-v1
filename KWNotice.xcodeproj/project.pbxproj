@@ -325,8 +325,6 @@
 				A5E89935286D9E90009EE85E /* Info.plist */,
 				A5E89934286D9E77009EE85E /* KWNotice.entitlements */,
 				A57A2547286D7640002DB735 /* View */,
-				A57A2548286D7645002DB735 /* Favorite */,
-				A57A2549286D7648002DB735 /* Setting */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
 				A5E89936286D9EFE009EE85E /* AppDelegate.swift */,
 				A57A253D286D702F002DB735 /* Assets.xcassets */,
@@ -348,9 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				A57A253B286D702E002DB735 /* RootView.swift */,
-				A57A254A286D7656002DB735 /* NoticeView.swift */,
-				A54EC211287402C800FF03E1 /* KWHomeNotice */,
-				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
+				A5BF259C2876CCDF00D5FBE9 /* Notice */,
+				A57A2548286D7645002DB735 /* Favorite */,
+				A57A2549286D7648002DB735 /* Setting */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +396,16 @@
 				A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */,
 			);
 			path = Dependency;
+			sourceTree = "<group>";
+		};
+		A5BF259C2876CCDF00D5FBE9 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A57A254A286D7656002DB735 /* NoticeView.swift */,
+				A54EC211287402C800FF03E1 /* KWHomeNotice */,
+				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 		A5D4D76B286ECC5A0019F156 /* KWNoticeKit */ = {
