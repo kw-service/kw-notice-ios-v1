@@ -320,13 +320,13 @@
 		A57A2538286D702E002DB735 /* KWNotice */ = {
 			isa = PBXGroup;
 			children = (
+				A5BF259D2876CD1900D5FBE9 /* App */,
 				A5B8C09E287296410042E3C5 /* Dependency */,
 				A5682208286F35E40034AF65 /* GoogleService-Info.plist */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
 				A5E89934286D9E77009EE85E /* KWNotice.entitlements */,
 				A57A2547286D7640002DB735 /* View */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
-				A5E89936286D9EFE009EE85E /* AppDelegate.swift */,
 				A57A253D286D702F002DB735 /* Assets.xcassets */,
 				A54EC21428741CF800FF03E1 /* Components */,
 				A57A253F286D702F002DB735 /* Preview Content */,
@@ -406,6 +406,14 @@
 				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
 			);
 			path = Notice;
+			sourceTree = "<group>";
+		};
+		A5BF259D2876CD1900D5FBE9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A5E89936286D9EFE009EE85E /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		A5D4D76B286ECC5A0019F156 /* KWNoticeKit */ = {
