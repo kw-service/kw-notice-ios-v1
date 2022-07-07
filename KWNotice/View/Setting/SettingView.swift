@@ -30,6 +30,20 @@ struct SettingView: View {
                     content: appInformation,
                     header: appInformationHeader
                 )
+                
+                #if DEBUG
+                Section(
+                    content: {
+                        NavigationLink("DEV - Saved Notifications") {
+                            SavedNotificationView()
+                        }
+                    },
+                    header: {
+                        Text("Develop")
+                            .foregroundColor(.blue)
+                    }
+                )
+                #endif
             }
             .navigationTitle("설정")
             .listStyle(.inset)

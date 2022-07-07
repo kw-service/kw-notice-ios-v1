@@ -47,6 +47,7 @@
 		A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */; };
 		A5BF259F2876CD5600D5FBE9 /* AppDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF259E2876CD5600D5FBE9 /* AppDelegate+.swift */; };
 		A5BF25A22876CDC600D5FBE9 /* Notification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A02876CDC600D5FBE9 /* Notification.xcdatamodeld */; };
+		A5BF25A42876D72C00D5FBE9 /* SavedNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */; };
 		A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C98239287054CF00B0080B /* TopicSubscriber.swift */; };
 		A5C9823C287058E800B0080B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9823B287058E800B0080B /* Topic.swift */; };
 		A5D4D76D286ECC5A0019F156 /* KWNoticeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -137,6 +138,7 @@
 		A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		A5BF259E2876CD5600D5FBE9 /* AppDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+.swift"; sourceTree = "<group>"; };
 		A5BF25A12876CDC600D5FBE9 /* Notification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notification.xcdatamodel; sourceTree = "<group>"; };
+		A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNotificationView.swift; sourceTree = "<group>"; };
 		A5C98239287054CF00B0080B /* TopicSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSubscriber.swift; sourceTree = "<group>"; };
 		A5C9823B287058E800B0080B /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,11 +326,11 @@
 		A57A2538286D702E002DB735 /* KWNotice */ = {
 			isa = PBXGroup;
 			children = (
-				A5BF259D2876CD1900D5FBE9 /* App */,
 				A5B8C09E287296410042E3C5 /* Dependency */,
 				A5682208286F35E40034AF65 /* GoogleService-Info.plist */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
 				A5E89934286D9E77009EE85E /* KWNotice.entitlements */,
+				A5BF259D2876CD1900D5FBE9 /* App */,
 				A57A2547286D7640002DB735 /* View */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
 				A57A253D286D702F002DB735 /* Assets.xcassets */,
@@ -372,6 +374,7 @@
 				A57A2552286D82F2002DB735 /* Setting.swift */,
 				A5C98239287054CF00B0080B /* TopicSubscriber.swift */,
 				A5C9823B287058E800B0080B /* Topic.swift */,
+				A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */,
+				A5BF25A42876D72C00D5FBE9 /* SavedNotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
