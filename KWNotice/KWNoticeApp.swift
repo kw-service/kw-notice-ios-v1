@@ -22,6 +22,7 @@ struct KWNoticeApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(topicSubscriber)
+                .environment(\.managedObjectContext, delegate.persistentContainer.viewContext)
         }
     }
 }

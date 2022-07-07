@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UserNotifications
+import CoreData
 import FirebaseCore
 import FirebaseMessaging
 
@@ -31,26 +32,52 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().setAPNSToken(deviceToken, type: .unknown)
     }
+    
+    // MARK: - Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "Notification")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                preconditionFailure("error detected: \(error)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                preconditionFailure("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        saveNotification(parseFrom: notification.request.content.userInfo)
         completionHandler([.list, .banner, .badge, .sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        defer { completionHandler() }
+        
         let userInfo = response.notification.request.content.userInfo
         print("Notification tapped: \(userInfo)")
         
         guard let urlString = userInfo["url"] as? NSString,
               let url = URL(string: urlString as String) else {
             print("cannot parse url from UserInfo.")
-            completionHandler()
             return
         }
         
         UIApplication.shared.open(url)
-        completionHandler()
     }
 }
 
