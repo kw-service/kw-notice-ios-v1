@@ -1,37 +1,39 @@
 //
-//  KWHomeNoticeViewModelTest.swift
+//  SWCentralNoticeViewModelTest.swift
 //  KWNoticeTests
 //
 //  Created by 김세영 on 2022/07/05.
 //
 
 import XCTest
-import KWNoticeKit
 import Combine
+import KWNoticeKit
 @testable import KWNotice
 
-class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
-    
-    var viewModel: KWHomeNoticeViewModel!
+class SWCentralNoticeViewModelTest_SucceedCase: XCTestCase {
+
+    var viewModel: SWCentralNoticeViewModel!
     var titles = [String]()
     var searchTitle = ""
     var searchTargetCount = 0
-    var cancellables = Set<AnyCancellable>()
     
     override func setUp() async throws {
-        searchTitle = .random(3)
+        try await super.setUp()
+        
+        searchTitle = .random(10)
         for i in 100...1000 {
             titles.append(i % 3 == 0 ? searchTitle + .random(100) : .random(100))
             if i % 3 == 0 { searchTargetCount += 1 }
         }
         
-        DependencyContainer.shared.register(type: KWHomeRepositoryProtocol.self) { _ in
-            KWHomeRepository(dataStore: TestKWHomeDataStore(self.titles, isSucceedCase: true))
+        DependencyContainer.shared.register(type: SWCentralRepositoryProtocol.self) { _ in
+            let dataStore = TestSWCentralDataStore(titles, isSucceedCase: true)
+            return SWCentralRepository(dataStore: dataStore)
         }
-        viewModel = KWHomeNoticeViewModel()
+        viewModel = SWCentralNoticeViewModel()
     }
     
-    func test_KWHomeViewModel_fetch_shouldSetNoticesByGivenNotices() async {
+    func test_SWCentralViewModel_fetch_shouldSetNoticesByGivenNotices() async {
         // Given
         
         // When
@@ -42,7 +44,7 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
         XCTAssertEqual(titles, notices.map { $0.title })
     }
     
-    func test_KWHomeViewModel_search_shouldSetNoticesByGivenNoticesContainSearchTitle() async {
+    func test_SWCentralViewModel_search_shouldSetNoticesByGivenNoticesContainSearchTitle() async {
         // Given
         await viewModel.fetch()
         
@@ -54,7 +56,7 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
         XCTAssertGreaterThanOrEqual(notices.count, searchTargetCount)
     }
     
-    func test_KWHomeViewModel_searchWithEmptyString_shouldReturnGivenNotices() async {
+    func test_SWCentralViewModel_searchWithEmptyString_shouldReturnGivenNotices() async {
         // Given
         await viewModel.fetch()
         
@@ -67,9 +69,9 @@ class KWHomeNoticeViewModelTest_SucceedCase: XCTestCase {
     }
 }
 
-class KWHomeNoticeViewModelTest_FailCase: XCTestCase {
+class SWCentralNoticeViewModelTest_FailCase: XCTestCase {
     
-    var viewModel: KWHomeNoticeViewModel!
+    var viewModel: SWCentralNoticeViewModel!
     var titles = [String]()
     var searchTitle = ""
     var searchTargetCount = 0
@@ -82,10 +84,11 @@ class KWHomeNoticeViewModelTest_FailCase: XCTestCase {
             if i % 3 == 0 { searchTargetCount += 1 }
         }
         
-        DependencyContainer.shared.register(type: KWHomeRepositoryProtocol.self) { _ in
-            KWHomeRepository(dataStore: TestKWHomeDataStore(self.titles, isSucceedCase: false))
+        DependencyContainer.shared.register(type: SWCentralRepositoryProtocol.self) { _ in
+            let dataStore = TestSWCentralDataStore(self.titles, isSucceedCase: false)
+            return SWCentralRepository(dataStore: dataStore)
         }
-        viewModel = KWHomeNoticeViewModel()
+        viewModel = SWCentralNoticeViewModel()
     }
     
     func test_KWHomeNoticeViewModel_fetch_shouldPublishAlert() async {
