@@ -35,22 +35,23 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        saveNotification(parseFrom: notification.request.content.userInfo)
         completionHandler([.list, .banner, .badge, .sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        defer { completionHandler() }
+        
         let userInfo = response.notification.request.content.userInfo
         print("Notification tapped: \(userInfo)")
         
         guard let urlString = userInfo["url"] as? NSString,
               let url = URL(string: urlString as String) else {
             print("cannot parse url from UserInfo.")
-            completionHandler()
             return
         }
         
         UIApplication.shared.open(url)
-        completionHandler()
     }
 }
 
