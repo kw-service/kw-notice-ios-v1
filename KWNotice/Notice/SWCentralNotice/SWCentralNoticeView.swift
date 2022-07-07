@@ -12,6 +12,7 @@ struct SWCentralNoticeView: View {
     
     @Environment(\.openURL) var openURL
     @StateObject var viewModel = SWCentralNoticeViewModel()
+    
     @State var searchText = ""
     
     var body: some View {
