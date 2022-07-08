@@ -10,18 +10,24 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         TabView {
-            NoticeView()
+            KWHomeNoticeView()
                 .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("공지")
+                    Image(systemName: "graduationcap.fill")
+                    Text("광운대학교")
                 }
-            
+
+            SWCentralNoticeView()
+                .tabItem {
+                    Image(systemName: "s.circle.fill")
+                    Text("SW 사업단")
+                }
+
             FavoriteView()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("즐겨찾기")
                 }
-            
+
             SettingView()
                 .tabItem {
                     Image(systemName: "gearshape.fill")

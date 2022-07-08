@@ -14,6 +14,7 @@ struct SWCentralNoticeView: View {
     @StateObject var viewModel = SWCentralNoticeViewModel()
     
     @State var searchText = ""
+    @State var isSearching = false
     
     var body: some View {
         NavigationView {
@@ -26,13 +27,18 @@ struct SWCentralNoticeView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("SW사업단 공지사항")
-            .task(viewModel.fetch)
-            .refreshable(action: viewModel.fetch)
+            .task { await viewModel.fetch() }
+            .refreshable {
+                if !isSearching {
+                    await viewModel.refresh()
+                }
+            }
             .searchable(text: $searchText, prompt: "공지 검색")
             .onChange(of: searchText) { newValue in
+                isSearching = !newValue.isEmpty
                 viewModel.search(text: newValue)
             }
+            .navigationTitle("SW 사업단 공지")
         }
     }
     

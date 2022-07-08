@@ -15,6 +15,7 @@ struct KWHomeNoticeView: View {
     @StateObject var viewModel = KWHomeNoticeViewModel()
     
     @State var searchText = ""
+    @State var isSearching = false
     
     var body: some View {
         NavigationView {
@@ -22,18 +23,23 @@ struct KWHomeNoticeView: View {
                 ForEach(viewModel.notices, id: \.id) { notice in
                     contentCell(by: notice)
                         .onTapGesture {
-                            UIApplication.shared.open(notice.url)
+                            openURL(notice.url)
                         }
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("광운대학교 공지사항")
-            .task(viewModel.fetch)
-            .refreshable(action: viewModel.fetch)
+            .task { await viewModel.fetch() }
+            .refreshable {
+                if !isSearching {
+                    await viewModel.refresh()
+                }
+            }
             .searchable(text: $searchText, prompt: "공지 검색")
             .onChange(of: searchText) { newValue in
+                isSearching = !newValue.isEmpty
                 viewModel.search(text: newValue)
             }
+            .navigationTitle("광운대학교 공지")
         }
     }
     

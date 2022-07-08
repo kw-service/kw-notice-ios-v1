@@ -33,7 +33,6 @@
 		A57A253C286D702E002DB735 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A253B286D702E002DB735 /* RootView.swift */; };
 		A57A253E286D702F002DB735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A253D286D702F002DB735 /* Assets.xcassets */; };
 		A57A2541286D702F002DB735 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57A2540286D702F002DB735 /* Preview Assets.xcassets */; };
-		A57A254B286D7656002DB735 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254A286D7656002DB735 /* NoticeView.swift */; };
 		A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A254C286D7661002DB735 /* FavoriteView.swift */; };
 		A57A2551286D7671002DB735 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2550286D7671002DB735 /* SettingView.swift */; };
 		A57A2553286D82F2002DB735 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A2552286D82F2002DB735 /* Setting.swift */; };
@@ -127,7 +126,6 @@
 		A57A253B286D702E002DB735 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A57A253D286D702F002DB735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57A2540286D702F002DB735 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A57A254A286D7656002DB735 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		A57A254C286D7661002DB735 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		A57A2550286D7671002DB735 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		A57A2552286D82F2002DB735 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -359,7 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				A57A253B286D702E002DB735 /* RootView.swift */,
-				A5BF259C2876CCDF00D5FBE9 /* Notice */,
+				A54EC211287402C800FF03E1 /* KWHomeNotice */,
+				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
 				A57A2548286D7645002DB735 /* Favorite */,
 				A57A2549286D7648002DB735 /* Setting */,
 			);
@@ -410,16 +409,6 @@
 				A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */,
 			);
 			path = Dependency;
-			sourceTree = "<group>";
-		};
-		A5BF259C2876CCDF00D5FBE9 /* Notice */ = {
-			isa = PBXGroup;
-			children = (
-				A57A254A286D7656002DB735 /* NoticeView.swift */,
-				A54EC211287402C800FF03E1 /* KWHomeNotice */,
-				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
-			);
-			path = Notice;
 			sourceTree = "<group>";
 		};
 		A5BF259D2876CD1900D5FBE9 /* App */ = {
@@ -709,7 +698,6 @@
 				A57A2553286D82F2002DB735 /* Setting.swift in Sources */,
 				A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */,
 				A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */,
-				A57A254B286D7656002DB735 /* NoticeView.swift in Sources */,
 				A5C92964287814B2000AE7EA /* Date+.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
