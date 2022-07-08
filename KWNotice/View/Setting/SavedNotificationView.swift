@@ -25,7 +25,10 @@ struct SavedNotificationView: View {
                     .onDelete(perform: removeNotifications)
                 }
                 .toolbar {
-                    EditButton()
+                    HStack {
+                        copyButton
+                        EditButton()
+                    }
                 }
             }
         }
@@ -41,9 +44,15 @@ struct SavedNotificationView: View {
             .font(.title)
     }
     
+    var copyButton: some View {
+        Button("Copy") {
+            copyNotificationsAtClipboard()
+        }
+    }
+    
     func cell(for notification: Notification) -> some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(notification.title ?? "title is nil.")
+            Text(notification.title)
                 .bold()
                 .lineLimit(1)
             
@@ -51,6 +60,9 @@ struct SavedNotificationView: View {
                 .font(.caption)
             
             Text(notification.url?.path ?? "url is nil.")
+                .font(.caption)
+            
+            Text(notification.timestamp.toString(format: "YYYY-MM-dd HH:mm:ss"))
                 .font(.caption)
         }
     }
@@ -66,6 +78,24 @@ struct SavedNotificationView: View {
         } catch {
             saveErrorDetected = true
         }
+    }
+    
+    func copyNotificationsAtClipboard() {
+        var builder = ""
+        
+        for notification in notifications {
+            let notificationString = """
+            id: \(notification.id),
+            title: \(notification.title),
+            body: \(notification.body ?? "body is nil."),
+            url: \(notification.url?.absoluteString ?? "url is nil."),
+            timestamp: \(notification.timestamp)
+            
+            """
+            builder.append(notificationString)
+        }
+        
+        UIPasteboard.general.string = builder
     }
 }
 

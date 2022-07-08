@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Notification" representedClassName="Notification" syncable="YES" codeGenerationType="class">
+    <entity name="Notification" representedClassName="Notification" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="URI"/>
     </entity>
     <elements>
-        <element name="Notification" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Notification" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

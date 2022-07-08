@@ -67,16 +67,17 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         defer { completionHandler() }
-        
+
         let userInfo = response.notification.request.content.userInfo
         print("Notification tapped: \(userInfo)")
-        
+        saveNotification(parseFrom: userInfo)
+
         guard let urlString = userInfo["url"] as? NSString,
               let url = URL(string: urlString as String) else {
             print("cannot parse url from UserInfo.")
             return
         }
-        
+
         UIApplication.shared.open(url)
     }
 }
