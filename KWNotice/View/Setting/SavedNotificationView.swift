@@ -52,6 +52,9 @@ struct SavedNotificationView: View {
             
             Text(notification.url?.path ?? "url is nil.")
                 .font(.caption)
+            
+            Text(notification.timestamp.toString(format: "YYYY-MM-dd HH:mm:ss"))
+                .font(.caption)
         }
     }
     

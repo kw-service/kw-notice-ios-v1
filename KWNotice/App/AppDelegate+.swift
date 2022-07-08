@@ -27,6 +27,7 @@ extension AppDelegate {
                 notificationObject.setValue(notification.title, forKey: "title")
                 notificationObject.setValue(notification.body, forKey: "body")
                 notificationObject.setValue(notification.url, forKey: "url")
+                notificationObject.setValue(Date.now, forKey: "timestamp")
                 
                 do {
                     try self.persistentContainer.viewContext.save()
