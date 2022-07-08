@@ -50,6 +50,8 @@
 		A5C92964287814B2000AE7EA /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C92963287814B2000AE7EA /* Date+.swift */; };
 		A5C92967287815A3000AE7EA /* Notification+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C92965287815A3000AE7EA /* Notification+CoreDataClass.swift */; };
 		A5C92968287815A3000AE7EA /* Notification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C92966287815A3000AE7EA /* Notification+CoreDataProperties.swift */; };
+		A5C9296D28785A79000AE7EA /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9296C28785A79000AE7EA /* PlaceholderView.swift */; };
+		A5C9296F28785EDC000AE7EA /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9296E28785EDC000AE7EA /* NotificationCell.swift */; };
 		A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C98239287054CF00B0080B /* TopicSubscriber.swift */; };
 		A5C9823C287058E800B0080B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9823B287058E800B0080B /* Topic.swift */; };
 		A5D4D76D286ECC5A0019F156 /* KWNoticeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,6 +145,8 @@
 		A5C92963287814B2000AE7EA /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		A5C92965287815A3000AE7EA /* Notification+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5C92966287815A3000AE7EA /* Notification+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5C9296C28785A79000AE7EA /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		A5C9296E28785EDC000AE7EA /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		A5C98239287054CF00B0080B /* TopicSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSubscriber.swift; sourceTree = "<group>"; };
 		A5C9823B287058E800B0080B /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,8 +223,10 @@
 		A54EC21428741CF800FF03E1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A5C92962287814A7000AE7EA /* Extensions */,
+				A5C9296C28785A79000AE7EA /* PlaceholderView.swift */,
+				A5C9296E28785EDC000AE7EA /* NotificationCell.swift */,
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
+				A5C92962287814A7000AE7EA /* Extensions */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -691,12 +697,14 @@
 				A5C92968287815A3000AE7EA /* Notification+CoreDataProperties.swift in Sources */,
 				A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */,
 				A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */,
+				A5C9296D28785A79000AE7EA /* PlaceholderView.swift in Sources */,
 				A5BF259F2876CD5600D5FBE9 /* AppDelegate+.swift in Sources */,
 				A5C9823C287058E800B0080B /* Topic.swift in Sources */,
 				A5BF25A22876CDC600D5FBE9 /* Notification.xcdatamodeld in Sources */,
 				A57A2551286D7671002DB735 /* SettingView.swift in Sources */,
 				A57A2553286D82F2002DB735 /* Setting.swift in Sources */,
 				A5C9823A287054CF00B0080B /* TopicSubscriber.swift in Sources */,
+				A5C9296F28785EDC000AE7EA /* NotificationCell.swift in Sources */,
 				A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */,
 				A5C92964287814B2000AE7EA /* Date+.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
