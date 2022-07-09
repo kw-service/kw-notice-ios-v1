@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
 		A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */; };
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNotice.xcdatamodel; sourceTree = "<group>"; };
 		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
@@ -194,6 +196,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51EC350287911FB000A1FC7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		A51EC35128791205000A1FC7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		A54EC1F42873D87500FF03E1 /* KWNoticeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +486,7 @@
 		A5D4D778286ECCB50019F156 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC350287911FB000A1FC7 /* Favorite */,
 				A576657C2871B50100725147 /* KWHome */,
 				A5B8C08928727E460042E3C5 /* SWCentral */,
 			);
@@ -478,6 +496,7 @@
 		A5D4D779286ECCB90019F156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC35128791205000A1FC7 /* Favorite */,
 				A576654B2871ADDC00725147 /* Endpoint.swift */,
 				A576657A2871B37600725147 /* KWHomeNotice.swift */,
 				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
@@ -733,6 +752,7 @@
 				A5B8C08D28727E7D0042E3C5 /* SWCentralDataStore.swift in Sources */,
 				A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */,
 				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
+				A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1174,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */,
+			);
+			currentVersion = A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */;
+			path = FavoriteNotice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		A5BF25A02876CDC600D5FBE9 /* Notification.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
