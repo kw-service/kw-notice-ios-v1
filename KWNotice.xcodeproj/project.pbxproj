@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
+		A51EC3562879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */; };
 		A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */; };
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNotice.xcdatamodel; sourceTree = "<group>"; };
+		A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeDataStoreProtocol.swift; sourceTree = "<group>"; };
 		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		A51EC350287911FB000A1FC7 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */,
 				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
 				A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */,
+				A51EC3562879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
