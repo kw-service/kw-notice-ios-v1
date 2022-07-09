@@ -10,5 +10,5 @@ import Foundation
 public protocol FavoriteNoticeDataStoreProtocol {
     func fetch() -> [Favorite]?
     func save(_ favorite: Favorite) -> Bool
-    func delete(_ id: Int) -> Bool
+    func delete(_ id: Int, type: String) -> Bool
 }

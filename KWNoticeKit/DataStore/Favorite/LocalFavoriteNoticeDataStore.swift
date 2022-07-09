@@ -48,10 +48,12 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
         }
     }
     
-    public func delete(_ id: Int) -> Bool {
+    public func delete(_ id: Int, type: String) -> Bool {
         guard let favorites = self.fetch() else { return false }
-        guard let targetFavorite = favorites.first(where: { $0.id == id }) else {
-            print("cannot find favorite id - \(id)")
+        guard let targetFavorite = favorites.first(
+            where: { $0.id == id && $0.type == type }
+        ) else {
+            print("cannot find favorite id - \(id), type - \(type)")
             return false
         }
         persistentContainer.viewContext.delete(targetFavorite)
