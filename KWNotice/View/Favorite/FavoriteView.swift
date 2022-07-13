@@ -10,6 +10,7 @@ import KWNoticeKit
 
 struct FavoriteView: View {
     
+    @Environment(\.openURL) var openURL
     @StateObject var viewModel = FavoriteViewModel()
     @State private var editMode: EditMode = .inactive
     @State private var searchText = ""
@@ -45,6 +46,9 @@ struct FavoriteView: View {
         List {
             ForEach(viewModel.favorites, id: \.id) { favorite in
                 favoriteCell(favorite)
+                    .onTapGesture {
+                        openURL(favorite.url)
+                    }
             }
             .onDelete { indices in
                 if viewModel.favorites.count == 1 {
