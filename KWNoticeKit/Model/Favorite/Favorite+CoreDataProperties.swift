@@ -20,7 +20,7 @@ extension Favorite {
     @NSManaged public var postedDate: Date
     @NSManaged public var title: String
     @NSManaged public var type: String
-
+    @NSManaged public var url: URL
 }
 
 extension Favorite : Identifiable {
