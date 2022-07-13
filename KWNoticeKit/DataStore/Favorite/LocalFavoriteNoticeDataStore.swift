@@ -27,25 +27,22 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
         }
     }
     
-    public func save(_ favorite: Favorite) -> Bool {
-        guard let entity = NSEntityDescription.entity(
-            forEntityName: "Favorite",
-            in: persistentContainer.viewContext
-        ) else { return false }
-        
-        do {
-            entity.setValue(favorite.id, forKey: "id")
-            entity.setValue(favorite.title, forKey: "title")
-            entity.setValue(favorite.type, forKey: "type")
-            entity.setValue(favorite.postedDate, forKey: "postedDate")
-            
-            try persistentContainer.viewContext.save()
-            
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
+    public func save(kwHomeNotice: KWHomeNotice) -> Bool {
+        return self.save(
+            id: kwHomeNotice.id,
+            title: kwHomeNotice.title,
+            type: kwHomeNotice.type,
+            postedDate: .now// kwHomeNotice.postedDate
+        )
+    }
+    
+    public func save(swCentralNotice: SWCentralNotice) -> Bool {
+        return self.save(
+            id: swCentralNotice.id,
+            title: swCentralNotice.title,
+            type: swCentralNotice.type,
+            postedDate: .now// swCentralNotice.postedDate
+        )
     }
     
     public func delete(_ id: Int, type: String) -> Bool {
@@ -59,6 +56,28 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
         persistentContainer.viewContext.delete(targetFavorite)
         do {
             try persistentContainer.viewContext.save()
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+    
+    // MARK: - Privates
+    private func save(id: Int, title: String, type: String, postedDate: Date) -> Bool {
+        guard let entity = NSEntityDescription.entity(
+            forEntityName: "Favorite",
+            in: persistentContainer.viewContext
+        ) else { return false }
+        
+        do {
+            entity.setValue(id, forKey: "id")
+            entity.setValue(title, forKey: "title")
+            entity.setValue(type, forKey: "type")
+            entity.setValue(postedDate, forKey: "postedDate")
+            
+            try persistentContainer.viewContext.save()
+            
             return true
         } catch {
             print(error.localizedDescription)
