@@ -31,7 +31,9 @@ final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
         
         state = .fetching
         do {
-            notices = try await repository.fetch()
+            notices = try await repository
+                .fetch()
+                .sorted { $0.postedDate > $1.postedDate }
             isAlreadyFetched = true
             state = .none
         } catch {

@@ -69,6 +69,7 @@
 		A5D4D76D286ECC5A0019F156 /* KWNoticeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5D4D770286ECC5A0019F156 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
 		A5D4D771286ECC5A0019F156 /* KWNoticeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5E038CE287F231B00C391B2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E038CB287F220700C391B2 /* String+.swift */; };
 		A5E2B9CA28746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B9C928746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift */; };
 		A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */; };
 		A5E89931286D9CA2009EE85E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89930286D9CA2009EE85E /* FirebaseAnalytics */; };
@@ -173,6 +174,7 @@
 		A5C9823B287058E800B0080B /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWNoticeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D4D76C286ECC5A0019F156 /* KWNoticeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWNoticeKit.h; sourceTree = "<group>"; };
+		A5E038CB287F220700C391B2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A5E2B9C928746C7B00FE46A4 /* SWCentralNoticeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeViewModelTest.swift; sourceTree = "<group>"; };
 		A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeView.swift; sourceTree = "<group>"; };
 		A5E89934286D9E77009EE85E /* KWNotice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KWNotice.entitlements; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 		A5D4D76B286ECC5A0019F156 /* KWNoticeKit */ = {
 			isa = PBXGroup;
 			children = (
+				A5E038CD287F231300C391B2 /* Extension */,
 				A5D4D779286ECCB90019F156 /* Model */,
 				A5D4D777286ECCB10019F156 /* Repository */,
 				A5D4D778286ECCB50019F156 /* DataStore */,
@@ -539,6 +542,14 @@
 				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A5E038CD287F231300C391B2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5E038CB287F220700C391B2 /* String+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,6 +795,7 @@
 			files = (
 				A57665802871B56800725147 /* KWHomeDataStore.swift in Sources */,
 				A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */,
+				A5E038CE287F231B00C391B2 /* String+.swift in Sources */,
 				A5B8C09028727F200042E3C5 /* SWCentralRepositoryProtocol.swift in Sources */,
 				A5B8C09228727F6C0042E3C5 /* SWCentralRepository.swift in Sources */,
 				A57665852871B7D900725147 /* KWHomeRepository.swift in Sources */,
