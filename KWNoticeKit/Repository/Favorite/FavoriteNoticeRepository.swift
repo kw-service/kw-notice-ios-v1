@@ -18,18 +18,18 @@ public final class FavoriteNoticeRepository: FavoriteNoticeRepositoryProtocol {
     }
     
     public func fetch() -> [Favorite]? {
-        return nil
+        return dataStore.fetch()
     }
     
     public func save(kwHomeNotice: KWHomeNotice) -> Bool {
-        return false
+        return dataStore.save(kwHomeNotice: kwHomeNotice)
     }
     
     public func save(swCentralNotice: SWCentralNotice) -> Bool {
-        return false
+        return dataStore.save(swCentralNotice: swCentralNotice)
     }
     
     public func delete(favorite: Favorite) -> Bool {
-        return false
+        return dataStore.delete(favorite.id, type: favorite.type)
     }
 }
