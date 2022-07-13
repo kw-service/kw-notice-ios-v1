@@ -29,6 +29,7 @@ struct KWNoticeApp: App {
 
 extension KWNoticeApp {
     func configureDependency() {
+        configureFavoriteDependency()
         configureNoticeDependency()
     }
     
@@ -43,7 +44,7 @@ extension KWNoticeApp {
         }
         
         DependencyContainer.shared.register(type: KWHomeRepositoryProtocol.self) { r in
-            KWHomeRepository(dataStore: r.resolve() ?? KWHomeDataStore())
+            KWHomeRepository(dataStore: r.resolve())
         }
     }
     
@@ -53,7 +54,17 @@ extension KWNoticeApp {
         }
         
         DependencyContainer.shared.register(type: SWCentralRepositoryProtocol.self) { r in
-            SWCentralRepository(dataStore: r.resolve() ?? SWCentralDataStore())
+            SWCentralRepository(dataStore: r.resolve())
+        }
+    }
+    
+    func configureFavoriteDependency() {
+        DependencyContainer.shared.register(type: FavoriteNoticeDataStoreProtocol.self) { _ in
+            LocalFavoriteNoticeDataStore()
+        }
+        
+        DependencyContainer.shared.register(type: FavoriteNoticeRepositoryProtocol.self) { r in
+            FavoriteNoticeRepository(dataStore: r.resolve())
         }
     }
 }

@@ -14,7 +14,6 @@ struct NotificationCell: View {
     let dateInfo: String
     let department: String?
     
-    
     init(kwHomeNotice: KWHomeNotice) {
         self.title = kwHomeNotice.title
         self.dateInfo = "작성일 \(Date.now) | 수정일 \(Date.now)"
@@ -28,27 +27,19 @@ struct NotificationCell: View {
     }
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 5) {
-                Text(title)
-                    .bold()
-                    .lineLimit(1)
-                
-                Text(dateInfo)
+        VStack(alignment: .leading, spacing: 5) {
+            Text(title)
+                .bold()
+                .lineLimit(1)
+            
+            Text(dateInfo)
+                .font(.caption)
+                .foregroundColor(.gray)
+            
+            if let department = department {
+                Text(department)
                     .font(.caption)
                     .foregroundColor(.gray)
-                
-                if let department = department {
-                    Text(department)
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-            }
-            
-            Spacer()
-            
-            Button(action: {}) {
-                Image(systemName: "star")
             }
         }
         .padding(.vertical, 8)

@@ -19,6 +19,7 @@ final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     // MARK: - Properties
     @Resolve private var repository: SWCentralRepositoryProtocol
+    @Resolve private var favoriteRepository: FavoriteNoticeRepositoryProtocol
     @Published var notices = [SWCentralNotice]()
     
     private(set) var state = State.none
@@ -46,5 +47,13 @@ final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     func search(text: String) {
         notices = repository.search(text: text)
+    }
+    
+    func addFavorite(_ notice: SWCentralNotice) {
+        if !favoriteRepository.save(swCentralNotice: notice) {
+            sendAlert(with: "즐겨찾기 추가 중 오류가 발생했습니다.")
+            return
+        }
+        sendAlert(with: "즐겨찾기에 추가되었습니다.")
     }
 }

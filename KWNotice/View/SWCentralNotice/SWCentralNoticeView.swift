@@ -31,7 +31,7 @@ struct SWCentralNoticeView: View {
         }
         .task { await viewModel.fetch() }
         .alert(viewModel.alertMessage, isPresented: $viewModel.isPresented) {
-            Text(viewModel.alertMessage)
+            Button("확인") {}
         }
     }
     
@@ -42,6 +42,14 @@ struct SWCentralNoticeView: View {
                     .onTapGesture {
                         UIApplication.shared.open(notice.url)
                     }
+                    .swipeActions(edge: .leading) {
+                        Button(action: {
+                            viewModel.addFavorite(notice)
+                        }) {
+                            Image(systemName: "star")
+                        }
+                    }
+                    .tint(.yellow)
             }
         }
         .listStyle(.plain)
