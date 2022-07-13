@@ -11,6 +11,7 @@ struct SettingView: View {
     
     // MARK: - Properties
     @EnvironmentObject var topicSubscriber: TopicSubscriber
+    @AppStorage("use_external_browser") var useExternalBrowser = false
     
     // MARK: - UI
     var body: some View {
@@ -24,6 +25,11 @@ struct SettingView: View {
                 Section(
                     content: swNotificationSettings,
                     header: swNotificationHeader
+                )
+                
+                Section(
+                    content: appSettings,
+                    header: appSettingsHeader
                 )
                 
                 Section(
@@ -73,6 +79,30 @@ extension SettingView {
     
     func swNotificationHeader() -> some View {
         Text("SW중심대학산업단 알림")
+            .foregroundColor(.accentColor)
+    }
+    
+    // MARK: - App Setting
+    @ViewBuilder
+    func appSettings() -> some View {
+        Toggle(isOn: $useExternalBrowser) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("외부 브라우저 사용")
+                Text(getSubtitleForUseExternalBrowser())
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+        }
+    }
+    
+    private func getSubtitleForUseExternalBrowser() -> String {
+        let externalBrowserUsed = "공지사항을 터치하면 사파리 및 크롬 등의 외부 브라우저로 연결됩니다."
+        let internalBrowserUsed = "공지사항을 터치하면 앱 내에서 브라우저가 열립니다."
+        return useExternalBrowser ? externalBrowserUsed : internalBrowserUsed
+    }
+    
+    func appSettingsHeader() -> some View {
+        Text("앱 설정")
             .foregroundColor(.accentColor)
     }
     
