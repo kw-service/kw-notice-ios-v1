@@ -39,10 +39,12 @@ struct KWHomeNoticeView: View {
     var noticesList: some View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
-                NotificationCell(kwHomeNotice: notice)
-                    .onTapGesture {
-                        UIApplication.shared.open(notice.url)
-                    }
+                NotificationCell(kwHomeNotice: notice) {
+                    viewModel.addFavorite(notice)
+                }
+//                .onTapGesture {
+//                    UIApplication.shared.open(notice.url)
+//                }
             }
         }
         .listStyle(.plain)

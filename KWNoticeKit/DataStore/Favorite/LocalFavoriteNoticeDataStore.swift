@@ -65,17 +65,23 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
     
     // MARK: - Privates
     private func save(id: Int, title: String, type: String, postedDate: Date) -> Bool {
+        if isAlreadyExist(id: id, type: type) { return true }
+        
         guard let entity = NSEntityDescription.entity(
             forEntityName: "Favorite",
             in: persistentContainer.viewContext
         ) else { return false }
+    
+        let favoriteObject = NSManagedObject(
+            entity: entity,
+            insertInto: persistentContainer.viewContext
+        )
+        favoriteObject.setValue(id, forKey: "id")
+        favoriteObject.setValue(title, forKey: "title")
+        favoriteObject.setValue(type, forKey: "type")
+        favoriteObject.setValue(postedDate, forKey: "postedDate")
         
         do {
-            entity.setValue(id, forKey: "id")
-            entity.setValue(title, forKey: "title")
-            entity.setValue(type, forKey: "type")
-            entity.setValue(postedDate, forKey: "postedDate")
-            
             try persistentContainer.viewContext.save()
             
             return true
@@ -83,6 +89,12 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
             print(error.localizedDescription)
             return false
         }
+    }
+    
+    private func isAlreadyExist(id: Int, type: String) -> Bool {
+        guard let notices = fetch() else { return false }
+        
+        return notices.contains(where: { $0.id == id && $0.type == type })
     }
 
     // MARK: - Core Data stack

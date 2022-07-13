@@ -19,8 +19,7 @@ final class FavoriteViewModel: AlertPublishableObject, ObservableObject {
     // MARK: - Properties
     @Resolve var repository: FavoriteNoticeRepositoryProtocol
     @Published var favorites = [Favorite]()
-    
-    private(set) var state = State.noContent
+    @Published private(set) var state = State.noContent
     
     // MARK: - Methods
     func fetch() {

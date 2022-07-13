@@ -13,18 +13,20 @@ struct NotificationCell: View {
     let title: String
     let dateInfo: String
     let department: String?
+    var addFavoriteAction: () -> Void
     
-    
-    init(kwHomeNotice: KWHomeNotice) {
+    init(kwHomeNotice: KWHomeNotice, addFavorite action: @escaping () -> Void) {
         self.title = kwHomeNotice.title
         self.dateInfo = "작성일 \(Date.now) | 수정일 \(Date.now)"
         self.department = kwHomeNotice.department
+        self.addFavoriteAction = action
     }
     
-    init(swCentralNotice: SWCentralNotice) {
+    init(swCentralNotice: SWCentralNotice, addFavorite action: @escaping () -> Void) {
         self.title = swCentralNotice.title
         self.dateInfo = "작성일 \(Date.now)"
         self.department = nil
+        self.addFavoriteAction = action
     }
     
     var body: some View {
@@ -47,7 +49,7 @@ struct NotificationCell: View {
             
             Spacer()
             
-            Button(action: {}) {
+            Button(action: addFavoriteAction) {
                 Image(systemName: "star")
             }
         }
@@ -60,6 +62,7 @@ fileprivate extension NotificationCell {
         self.title = title
         self.dateInfo = dateInfo
         self.department = department
+        self.addFavoriteAction = {}
     }
 }
 

@@ -38,10 +38,12 @@ struct SWCentralNoticeView: View {
     var noticesList: some View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
-                NotificationCell(swCentralNotice: notice)
-                    .onTapGesture {
-                        UIApplication.shared.open(notice.url)
-                    }
+                NotificationCell(swCentralNotice: notice) {
+                    viewModel.addFavorite(notice)
+                }
+                .onTapGesture {
+                    UIApplication.shared.open(notice.url)
+                }
             }
         }
         .listStyle(.plain)

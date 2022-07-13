@@ -29,8 +29,8 @@ struct KWNoticeApp: App {
 
 extension KWNoticeApp {
     func configureDependency() {
-        configureNoticeDependency()
         configureFavoriteDependency()
+        configureNoticeDependency()
     }
     
     func configureNoticeDependency() {
