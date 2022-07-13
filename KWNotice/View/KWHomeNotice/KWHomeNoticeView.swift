@@ -32,19 +32,25 @@ struct KWHomeNoticeView: View {
         }
         .task { await viewModel.fetch() }
         .alert(viewModel.alertMessage, isPresented: $viewModel.isPresented) {
-            Text(viewModel.alertMessage)
+            Button("확인") {}
         }
     }
     
     var noticesList: some View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
-                NotificationCell(kwHomeNotice: notice) {
-                    viewModel.addFavorite(notice)
-                }
-//                .onTapGesture {
-//                    UIApplication.shared.open(notice.url)
-//                }
+                NotificationCell(kwHomeNotice: notice)
+                    .onTapGesture {
+                        UIApplication.shared.open(notice.url)
+                    }
+                    .swipeActions(edge: .leading) {
+                        Button(action: {
+                            viewModel.addFavorite(notice)
+                        }) {
+                            Image(systemName: "star")
+                        }
+                    }
+                    .tint(.yellow)
             }
         }
         .listStyle(.plain)

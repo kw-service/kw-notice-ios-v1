@@ -20,6 +20,9 @@ struct FavoriteView: View {
         .onAppear {
             viewModel.fetch()
         }
+        .alert(viewModel.alertMessage, isPresented: $viewModel.isPresented) {
+            Button("확인") {}
+        }
     }
     
     @ViewBuilder var contentView: some View {
@@ -44,6 +47,7 @@ struct FavoriteView: View {
                 viewModel.delete(at: indices)
             }
         }
+        .listStyle(.plain)
         .toolbar {
             EditButton()
         }
@@ -60,11 +64,14 @@ struct FavoriteView: View {
     }
     
     func favoriteCell(_ favorite: Favorite) -> some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
             Text(favorite.title)
                 .bold()
+                .lineLimit(1)
             
             Text("작성일 \(favorite.postedDate.toString())")
+                .font(.caption)
+                .foregroundColor(.gray)
         }
     }
 }

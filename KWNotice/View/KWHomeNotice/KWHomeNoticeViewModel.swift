@@ -53,6 +53,12 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     func addFavorite(_ notice: KWHomeNotice) {
         if !favoriteRepository.save(kwHomeNotice: notice) {
             sendAlert(with: "즐겨찾기 추가 중 오류가 발생했습니다.")
+            return
         }
+        sendAlert(with: "즐겨찾기에 추가되었습니다.")
+    }
+    
+    func isFavorite(_ notice: KWHomeNotice) -> Bool {
+        return favoriteRepository.isFavorite(kwHomeNotice: notice)
     }
 }

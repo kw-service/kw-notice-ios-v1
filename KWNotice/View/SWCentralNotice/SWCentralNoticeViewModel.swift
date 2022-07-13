@@ -52,6 +52,8 @@ final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
     func addFavorite(_ notice: SWCentralNotice) {
         if !favoriteRepository.save(swCentralNotice: notice) {
             sendAlert(with: "즐겨찾기 추가 중 오류가 발생했습니다.")
+            return
         }
+        sendAlert(with: "즐겨찾기에 추가되었습니다.")
     }
 }
