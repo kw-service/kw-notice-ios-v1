@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
+		A51EC3562879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */; };
+		A51EC3582879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC3572879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift */; };
+		A51EC35B28791836000A1FC7 /* FavoriteNoticeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35A28791836000A1FC7 /* FavoriteNoticeRepositoryProtocol.swift */; };
+		A51EC35D2879192E000A1FC7 /* FavoriteNoticeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */; };
+		A51EC35F2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */; };
+		A51EC36328791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */; };
 		A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */; };
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
@@ -16,6 +23,8 @@
 		A54EC21B28741DF400FF03E1 /* TestSWCentralDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */; };
 		A54EC21D28741DFF00FF03E1 /* Random+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576658C2871BB9800725147 /* Random+.swift */; };
 		A54EC22028743F4E00FF03E1 /* SWCentralNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC21F28743F4E00FF03E1 /* SWCentralNoticeViewModel.swift */; };
+		A564330E287928D500489909 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330C287928D500489909 /* Favorite+CoreDataClass.swift */; };
+		A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
@@ -44,6 +53,7 @@
 		A5B8C09428727FFE0042E3C5 /* TestSWCentralDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */; };
 		A5B8C096287280990042E3C5 /* SWCentralRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */; };
 		A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */; };
+		A5BE616E287E927D006B241B /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
 		A5BF259F2876CD5600D5FBE9 /* AppDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF259E2876CD5600D5FBE9 /* AppDelegate+.swift */; };
 		A5BF25A22876CDC600D5FBE9 /* Notification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A02876CDC600D5FBE9 /* Notification.xcdatamodeld */; };
 		A5BF25A42876D72C00D5FBE9 /* SavedNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */; };
@@ -103,6 +113,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNotice.xcdatamodel; sourceTree = "<group>"; };
+		A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeDataStoreProtocol.swift; sourceTree = "<group>"; };
+		A51EC3572879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavoriteNoticeDataStore.swift; sourceTree = "<group>"; };
+		A51EC35A28791836000A1FC7 /* FavoriteNoticeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepository.swift; sourceTree = "<group>"; };
+		A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFavoriteNoticeDataStore.swift; sourceTree = "<group>"; };
+		A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepositoryTest.swift; sourceTree = "<group>"; };
 		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +127,8 @@
 		A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPublishableObject.swift; sourceTree = "<group>"; };
 		A54EC21828741DD700FF03E1 /* KWHomeNoticeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModelTest.swift; sourceTree = "<group>"; };
 		A54EC21F28743F4E00FF03E1 /* SWCentralNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeViewModel.swift; sourceTree = "<group>"; };
+		A564330C287928D500489909 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -194,6 +213,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51EC350287911FB000A1FC7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */,
+				A51EC3572879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		A51EC35128791205000A1FC7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A564330C287928D500489909 /* Favorite+CoreDataClass.swift */,
+				A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */,
+				A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		A51EC35928791828000A1FC7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A51EC35A28791836000A1FC7 /* FavoriteNoticeRepositoryProtocol.swift */,
+				A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		A54EC1F42873D87500FF03E1 /* KWNoticeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +345,7 @@
 			children = (
 				A57665872871BA5200725147 /* KWHomeRepositoryTest.swift */,
 				A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */,
+				A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */,
 			);
 			path = RepositoryTests;
 			sourceTree = "<group>";
@@ -307,6 +355,7 @@
 			children = (
 				A576658A2871BAA400725147 /* TestKWHomeDataStore.swift */,
 				A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */,
+				A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */,
 				A576658C2871BB9800725147 /* Random+.swift */,
 			);
 			path = TestExtensions;
@@ -460,6 +509,7 @@
 		A5D4D777286ECCB10019F156 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC35928791828000A1FC7 /* Favorite */,
 				A57665812871B5D500725147 /* KWHome */,
 				A5B8C08E28727F130042E3C5 /* SWCentral */,
 			);
@@ -469,6 +519,7 @@
 		A5D4D778286ECCB50019F156 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC350287911FB000A1FC7 /* Favorite */,
 				A576657C2871B50100725147 /* KWHome */,
 				A5B8C08928727E460042E3C5 /* SWCentral */,
 			);
@@ -478,6 +529,7 @@
 		A5D4D779286ECCB90019F156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A51EC35128791205000A1FC7 /* Favorite */,
 				A576654B2871ADDC00725147 /* Endpoint.swift */,
 				A576657A2871B37600725147 /* KWHomeNotice.swift */,
 				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
@@ -681,10 +733,13 @@
 			files = (
 				A576658B2871BAA400725147 /* TestKWHomeDataStore.swift in Sources */,
 				A57665882871BA5200725147 /* KWHomeRepositoryTest.swift in Sources */,
+				A51EC35F2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift in Sources */,
 				A576658D2871BB9800725147 /* Random+.swift in Sources */,
 				A5B8C096287280990042E3C5 /* SWCentralRepositoryTest.swift in Sources */,
 				A5B8C09428727FFE0042E3C5 /* TestSWCentralDataStore.swift in Sources */,
+				A5BE616E287E927D006B241B /* FavoriteNotice.xcdatamodeld in Sources */,
 				A57665792871B21A00725147 /* EndpointTest.swift in Sources */,
+				A51EC36328791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,13 +781,20 @@
 				A5B8C09028727F200042E3C5 /* SWCentralRepositoryProtocol.swift in Sources */,
 				A5B8C09228727F6C0042E3C5 /* SWCentralRepository.swift in Sources */,
 				A57665852871B7D900725147 /* KWHomeRepository.swift in Sources */,
+				A51EC35D2879192E000A1FC7 /* FavoriteNoticeRepository.swift in Sources */,
 				A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */,
+				A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */,
 				A576654C2871ADDC00725147 /* Endpoint.swift in Sources */,
 				A5B8C08828727CB70042E3C5 /* SWCentralNotice.swift in Sources */,
+				A51EC3582879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift in Sources */,
 				A5B8C08B28727E550042E3C5 /* SWCentralDataStoreProtocol.swift in Sources */,
+				A51EC35B28791836000A1FC7 /* FavoriteNoticeRepositoryProtocol.swift in Sources */,
 				A5B8C08D28727E7D0042E3C5 /* SWCentralDataStore.swift in Sources */,
+				A564330E287928D500489909 /* Favorite+CoreDataClass.swift in Sources */,
 				A57665832871B5E000725147 /* KWHomeRepositoryProtocol.swift in Sources */,
 				A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */,
+				A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */,
+				A51EC3562879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1216,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */,
+			);
+			currentVersion = A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */;
+			path = FavoriteNotice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		A5BF25A02876CDC600D5FBE9 /* Notification.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
