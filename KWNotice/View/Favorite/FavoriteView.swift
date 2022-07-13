@@ -111,7 +111,9 @@ struct FavoriteView: View {
     
     var editButton: some View {
         return Button(editMode == .inactive ? "편집" : "완료") {
-            editMode = (editMode == .inactive) ? .active : .inactive
+            withAnimation {
+                editMode = (editMode == .inactive) ? .active : .inactive
+            }
         }
     }
 }
