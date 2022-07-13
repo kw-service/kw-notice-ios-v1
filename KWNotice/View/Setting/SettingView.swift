@@ -48,6 +48,7 @@ struct SettingView: View {
             .navigationTitle("설정")
             .listStyle(.inset)
         }
+        .navigationViewStyle(.stack)
     }
 }
 
