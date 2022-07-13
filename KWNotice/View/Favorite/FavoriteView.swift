@@ -25,6 +25,7 @@ struct FavoriteView: View {
         .alert(viewModel.alertMessage, isPresented: $viewModel.isPresented) {
             Button("확인") {}
         }
+        .navigationViewStyle(.stack)
     }
     
     @ViewBuilder var contentView: some View {

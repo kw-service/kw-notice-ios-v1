@@ -33,6 +33,7 @@ struct SWCentralNoticeView: View {
         .alert(viewModel.alertMessage, isPresented: $viewModel.isPresented) {
             Button("확인") {}
         }
+        .navigationViewStyle(.stack)
     }
     
     var noticesList: some View {
