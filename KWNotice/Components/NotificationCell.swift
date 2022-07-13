@@ -16,13 +16,13 @@ struct NotificationCell: View {
     
     init(kwHomeNotice: KWHomeNotice) {
         self.title = kwHomeNotice.title
-        self.dateInfo = "작성일 \(Date.now) | 수정일 \(Date.now)"
+        self.dateInfo = "작성일 \(kwHomeNotice.postedDate.toString()) | 수정일 \(kwHomeNotice.modifiedDate.toString())"
         self.department = kwHomeNotice.department
     }
     
     init(swCentralNotice: SWCentralNotice) {
         self.title = swCentralNotice.title
-        self.dateInfo = "작성일 \(Date.now)"
+        self.dateInfo = "작성일 \(swCentralNotice.postedDate.toString())"
         self.department = nil
     }
     
