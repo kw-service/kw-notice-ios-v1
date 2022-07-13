@@ -54,6 +54,8 @@
 		A5B8C096287280990042E3C5 /* SWCentralRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */; };
 		A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */; };
 		A5BE616E287E927D006B241B /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
+		A5BE6170287E9BBD006B241B /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE616F287E9BBD006B241B /* FavoriteViewModel.swift */; };
+		A5BE6171287EA414006B241B /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
 		A5BF259F2876CD5600D5FBE9 /* AppDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF259E2876CD5600D5FBE9 /* AppDelegate+.swift */; };
 		A5BF25A22876CDC600D5FBE9 /* Notification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A02876CDC600D5FBE9 /* Notification.xcdatamodeld */; };
 		A5BF25A42876D72C00D5FBE9 /* SavedNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */; };
@@ -158,6 +160,7 @@
 		A5B8C09328727FFE0042E3C5 /* TestSWCentralDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSWCentralDataStore.swift; sourceTree = "<group>"; };
 		A5B8C095287280990042E3C5 /* SWCentralRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralRepositoryTest.swift; sourceTree = "<group>"; };
 		A5B8C09F2872964D0042E3C5 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		A5BE616F287E9BBD006B241B /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		A5BF259E2876CD5600D5FBE9 /* AppDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+.swift"; sourceTree = "<group>"; };
 		A5BF25A12876CDC600D5FBE9 /* Notification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notification.xcdatamodel; sourceTree = "<group>"; };
 		A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNotificationView.swift; sourceTree = "<group>"; };
@@ -424,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				A57A254C286D7661002DB735 /* FavoriteView.swift */,
+				A5BE616F287E9BBD006B241B /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -751,6 +755,7 @@
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
 				A5C92968287815A3000AE7EA /* Notification+CoreDataProperties.swift in Sources */,
 				A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */,
+				A5BE6170287E9BBD006B241B /* FavoriteViewModel.swift in Sources */,
 				A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */,
 				A5C9296D28785A79000AE7EA /* PlaceholderView.swift in Sources */,
 				A5BF259F2876CD5600D5FBE9 /* AppDelegate+.swift in Sources */,
@@ -767,6 +772,7 @@
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
 				A5C92967287815A3000AE7EA /* Notification+CoreDataClass.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
+				A5BE6171287EA414006B241B /* FavoriteNotice.xcdatamodeld in Sources */,
 				A57A253A286D702E002DB735 /* KWNoticeApp.swift in Sources */,
 				A5BF25A42876D72C00D5FBE9 /* SavedNotificationView.swift in Sources */,
 			);

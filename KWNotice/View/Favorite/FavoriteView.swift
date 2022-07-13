@@ -6,15 +6,77 @@
 //
 
 import SwiftUI
+import KWNoticeKit
 
 struct FavoriteView: View {
+    
+    @StateObject var viewModel = FavoriteViewModel()
+    
     var body: some View {
-        Text("즐겨찾기")
+        NavigationView {
+            contentView
+                .navigationTitle("즐겨찾기")
+        }
+        .onAppear {
+            viewModel.fetch()
+        }
+    }
+    
+    @ViewBuilder var contentView: some View {
+        switch viewModel.state {
+            case .noContent:
+                fetchFailed
+            case .fetched:
+                favoritesList
+            case .error:
+                PlaceholderView {
+                    viewModel.fetch()
+                }
+        }
+    }
+    
+    var favoritesList: some View {
+        List {
+            ForEach(viewModel.favorites, id: \.id) { favorite in
+                favoriteCell(favorite)
+            }
+            .onDelete { indices in
+                viewModel.delete(at: indices)
+            }
+        }
+        .toolbar {
+            EditButton()
+        }
+    }
+    
+    var fetchFailed: some View {
+        VStack(spacing: 30) {
+            Image(systemName: "star.slash.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 50)
+            Text("등록된 즐겨찾기가 없습니다.")
+        }
+    }
+    
+    func favoriteCell(_ favorite: Favorite) -> some View {
+        VStack {
+            Text(favorite.title)
+                .bold()
+            
+            Text("작성일 \(favorite.postedDate.toString())")
+        }
     }
 }
 
 struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteView()
+        DependencyContainer.shared.register(type: FavoriteNoticeDataStoreProtocol.self) { _ in
+            LocalFavoriteNoticeDataStore()
+        }
+        DependencyContainer.shared.register(type: FavoriteNoticeRepositoryProtocol.self) { r in
+            FavoriteNoticeRepository(dataStore: r.resolve())
+        }
+        return FavoriteView()
     }
 }
