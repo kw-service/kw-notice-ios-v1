@@ -12,7 +12,6 @@ struct FavoriteView: View {
     
     @Environment(\.openURL) var openURL
     @StateObject var viewModel = FavoriteViewModel()
-    @State private var editMode: EditMode = .inactive
     @State private var searchText = ""
     
     var body: some View {
@@ -45,27 +44,27 @@ struct FavoriteView: View {
     var favoritesList: some View {
         List {
             ForEach(viewModel.favorites, id: \.id) { favorite in
-                favoriteCell(favorite)
-                    .onTapGesture {
-                        openURL(favorite.url)
-                    }
+                HStack(spacing: 15) {
+                    favoriteTypeIcon(favorite.type)
+                    
+                    NotificationCell(favorite: favorite)
+                        .onTapGesture {
+                            openURL(favorite.url)
+                        }
+                }
             }
             .onDelete { indices in
-                if viewModel.favorites.count == 1 {
-                    editMode = .inactive
-                }
                 viewModel.delete(at: indices)
             }
         }
         .listStyle(.plain)
-        .environment(\.editMode, $editMode)
         .searchable(
             text: $searchText,
             placement: .navigationBarDrawer(displayMode: .always),
             prompt: "즐겨찾기 검색"
         )
         .toolbar {
-            editButton
+            EditButton()
         }
         .onChange(of: searchText) { newValue in
             viewModel.search(newValue)
@@ -82,22 +81,6 @@ struct FavoriteView: View {
         }
     }
     
-    func favoriteCell(_ favorite: Favorite) -> some View {
-        HStack(spacing: 15) {
-            favoriteTypeIcon(favorite.type)
-
-            VStack(alignment: .leading, spacing: 10) {
-                Text(favorite.title)
-                    .bold()
-                    .lineLimit(1)
-                
-                Text("작성일 \(favorite.postedDate.toString())")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-            }
-        }
-    }
-    
     func favoriteTypeIcon(_ type: String) -> some View {
         if type == "KW_HOME" {
             return Image(systemName: "graduationcap.circle.fill")
@@ -111,14 +94,6 @@ struct FavoriteView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 20)
                 .foregroundColor(.blue)
-        }
-    }
-    
-    var editButton: some View {
-        return Button(editMode == .inactive ? "편집" : "완료") {
-            withAnimation {
-                editMode = (editMode == .inactive) ? .active : .inactive
-            }
         }
     }
 }
