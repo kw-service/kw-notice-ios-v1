@@ -40,9 +40,6 @@ struct SWCentralNoticeView: View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
                 NotificationCell(swCentralNotice: notice)
-                    .onTapGesture {
-                        UIApplication.shared.open(notice.url)
-                    }
                     .swipeActions(edge: .leading) {
                         Button(action: {
                             viewModel.addFavorite(notice)

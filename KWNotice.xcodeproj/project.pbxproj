@@ -75,6 +75,7 @@
 		A5E89931286D9CA2009EE85E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89930286D9CA2009EE85E /* FirebaseAnalytics */; };
 		A5E89933286D9CA2009EE85E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89932286D9CA2009EE85E /* FirebaseMessaging */; };
 		A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89936286D9EFE009EE85E /* AppDelegate.swift */; };
+		A5EF96DF287F3311002AE201 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF96DE287F3311002AE201 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 		A5E89934286D9E77009EE85E /* KWNotice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KWNotice.entitlements; sourceTree = "<group>"; };
 		A5E89935286D9E90009EE85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A5E89936286D9EFE009EE85E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5EF96DE287F3311002AE201 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				A5C9296E28785EDC000AE7EA /* NotificationCell.swift */,
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
 				A5C92962287814A7000AE7EA /* Extensions */,
+				A5EF96DE287F3311002AE201 /* SafariView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 		A57A2538286D702E002DB735 /* KWNotice */ = {
 			isa = PBXGroup;
 			children = (
+				A5A1048E287FC67800A013CB /* Localization */,
 				A5B8C09E287296410042E3C5 /* Dependency */,
 				A5682208286F35E40034AF65 /* GoogleService-Info.plist */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
@@ -444,6 +448,13 @@
 				A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		A5A1048E287FC67800A013CB /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		A5B8C08928727E460042E3C5 /* SWCentral */ = {
@@ -677,6 +688,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = A57A252D286D702E002DB735;
 			packageReferences = (
@@ -781,6 +793,7 @@
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
+				A5EF96DF287F3311002AE201 /* SafariView.swift in Sources */,
 				A5C92967287815A3000AE7EA /* Notification+CoreDataClass.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A5BE6171287EA414006B241B /* FavoriteNotice.xcdatamodeld in Sources */,

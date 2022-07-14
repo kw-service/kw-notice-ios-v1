@@ -32,7 +32,8 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
             id: kwHomeNotice.id,
             title: kwHomeNotice.title,
             type: kwHomeNotice.type,
-            postedDate: .now// kwHomeNotice.postedDate
+            postedDate: kwHomeNotice.postedDate,
+            url: kwHomeNotice.url
         )
     }
     
@@ -41,7 +42,8 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
             id: swCentralNotice.id,
             title: swCentralNotice.title,
             type: swCentralNotice.type,
-            postedDate: .now// swCentralNotice.postedDate
+            postedDate: swCentralNotice.postedDate,
+            url: swCentralNotice.url
         )
     }
     
@@ -64,7 +66,7 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
     }
     
     // MARK: - Privates
-    private func save(id: Int, title: String, type: String, postedDate: Date) -> Bool {
+    private func save(id: Int, title: String, type: String, postedDate: Date, url: URL) -> Bool {
         if isAlreadyExist(id: id, type: type) { return true }
         
         guard let entity = NSEntityDescription.entity(
@@ -80,6 +82,7 @@ public final class LocalFavoriteNoticeDataStore: FavoriteNoticeDataStoreProtocol
         favoriteObject.setValue(title, forKey: "title")
         favoriteObject.setValue(type, forKey: "type")
         favoriteObject.setValue(postedDate, forKey: "postedDate")
+        favoriteObject.setValue(url, forKey: "url")
         
         do {
             try persistentContainer.viewContext.save()

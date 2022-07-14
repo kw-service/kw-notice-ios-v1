@@ -14,8 +14,8 @@ struct KWHomeNoticeView: View {
     @Environment(\.openURL) var openURL
     @StateObject var viewModel = KWHomeNoticeViewModel()
     
-    @State var searchText = ""
-    @State var isSearching = false
+    @State private var searchText = ""
+    @State private var isSearching = false
     
     var body: some View {
         NavigationView {
@@ -41,9 +41,6 @@ struct KWHomeNoticeView: View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
                 NotificationCell(kwHomeNotice: notice)
-                    .onTapGesture {
-                        UIApplication.shared.open(notice.url)
-                    }
                     .swipeActions(edge: .leading) {
                         Button(action: {
                             viewModel.addFavorite(notice)
