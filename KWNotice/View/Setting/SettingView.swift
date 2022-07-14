@@ -11,7 +11,7 @@ struct SettingView: View {
     
     // MARK: - Properties
     @EnvironmentObject var topicSubscriber: TopicSubscriber
-    @AppStorage("use_external_browser") var useExternalBrowser = false
+    @AppStorage(Setting.useExternalBrowser) var useExternalBrowser = false
     
     // MARK: - UI
     var body: some View {
@@ -52,7 +52,7 @@ struct SettingView: View {
                 #endif
             }
             .navigationTitle("설정")
-            .listStyle(.inset)
+            .listStyle(.plain)
         }
         .navigationViewStyle(.stack)
     }
