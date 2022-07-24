@@ -12,4 +12,5 @@ enum Setting {
     static let appStoreURL = URL(string: "https://github.com/kw-notice/kw-notice-ios-v1")!
     
     static let useExternalBrowser = "use_external_browser"
+    static let isNotificationGranted = "is_notification_granted"
 }

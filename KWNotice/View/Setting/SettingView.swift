@@ -11,59 +11,105 @@ struct SettingView: View {
     
     // MARK: - Properties
     @EnvironmentObject var topicSubscriber: TopicSubscriber
+    @Environment(\.scenePhase) var scenePhase
     @AppStorage(Setting.useExternalBrowser) var useExternalBrowser = false
+    
+    @State var isNotificationGranted = false
     
     // MARK: - UI
     var body: some View {
         NavigationView {
-            List {
-                Section(
-                    content: kwNotificationSettings,
-                    header: kwNotificationHeader
-                )
-                
-                Section(
-                    content: swNotificationSettings,
-                    header: swNotificationHeader
-                )
-                
-                Section(
-                    content: appSettings,
-                    header: appSettingsHeader
-                )
-                
-                Section(
-                    content: appInformation,
-                    header: appInformationHeader
-                )
-                
-                #if DEBUG
-                Section(
-                    content: {
-                        NavigationLink("DEV - Saved Notifications") {
-                            SavedNotificationView()
+            VStack {
+                if !isNotificationGranted {
+                    permissionNotGrantedView
+                }
+                List {
+                    Section(
+                        content: kwNotificationSettings,
+                        header: kwNotificationHeader
+                    )
+                    
+                    Section(
+                        content: swNotificationSettings,
+                        header: swNotificationHeader
+                    )
+                    
+                    Section(
+                        content: appSettings,
+                        header: appSettingsHeader
+                    )
+                    
+                    Section(
+                        content: appInformation,
+                        header: appInformationHeader
+                    )
+                    
+#if DEBUG
+                    Section(
+                        content: {
+                            NavigationLink("DEV - Saved Notifications") {
+                                SavedNotificationView()
+                            }
+                        },
+                        header: {
+                            Text("Develop")
+                                .foregroundColor(.blue)
                         }
-                    },
-                    header: {
-                        Text("Develop")
-                            .foregroundColor(.blue)
-                    }
-                )
-                #endif
+                    )
+#endif
+                }
             }
             .navigationTitle("설정")
             .listStyle(.plain)
         }
         .navigationViewStyle(.stack)
+        .onChange(of: scenePhase) { phase in
+            if phase == .active {
+                updateIsNotificationGranted { isNotificationGranted in
+                    self.isNotificationGranted = isNotificationGranted
+                }
+            }
+        }
     }
 }
 
 extension SettingView {
+    // MARK: - Permission
+    func updateIsNotificationGranted(_ completion: @escaping (Bool) -> Void) {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            DispatchQueue.main.async {
+                let isNotificationGranted = (settings.authorizationStatus == .authorized)
+                self.isNotificationGranted = isNotificationGranted
+                completion(isNotificationGranted)
+            }
+        }
+    }
+    
+    var permissionNotGrantedView: some View {
+        Text(permissionNotGrantedMessage)
+            .font(.callout)
+            .padding()
+            .background {
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(.gray.opacity(0.2))
+            }
+    }
+    
+    var permissionNotGrantedMessage: LocalizedStringKey {
+        let appSettingLink = UIApplication.openSettingsURLString
+        let linkedMessage = "알림이 허용되어 있지 않습니다.\n[KW알리미 설정(바로가기)](\(appSettingLink))에서 알림을 허용해주세요."
+        
+        return LocalizedStringKey(linkedMessage)
+    }
+    
     // MARK: - KW Notification
     @ViewBuilder
     func kwNotificationSettings() -> some View {
         Toggle("새로운 공지사항 알림", isOn: $topicSubscriber.kwNewNotice)
+            .disabled(!isNotificationGranted)
+        
         Toggle("기존 공지사항 수정 알림", isOn: $topicSubscriber.kwEditNotice)
+            .disabled(!isNotificationGranted)
     }
     
     func kwNotificationHeader() -> some View {
@@ -75,6 +121,7 @@ extension SettingView {
     @ViewBuilder
     func swNotificationSettings() -> some View {
         Toggle("새로운 공지사항 알림", isOn: $topicSubscriber.swNewNotice)
+            .disabled(!isNotificationGranted)
     }
     
     func swNotificationHeader() -> some View {

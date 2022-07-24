@@ -394,7 +394,6 @@
 		A57A2538286D702E002DB735 /* KWNotice */ = {
 			isa = PBXGroup;
 			children = (
-				A5A1048E287FC67800A013CB /* Localization */,
 				A5B8C09E287296410042E3C5 /* Dependency */,
 				A5682208286F35E40034AF65 /* GoogleService-Info.plist */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
@@ -448,13 +447,6 @@
 				A5BF25A32876D72C00D5FBE9 /* SavedNotificationView.swift */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		A5A1048E287FC67800A013CB /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		A5B8C08928727E460042E3C5 /* SWCentral */ = {

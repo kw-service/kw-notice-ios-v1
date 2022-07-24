@@ -57,7 +57,11 @@ struct KWHomeNoticeView: View {
                 await viewModel.refresh()
             }
         }
-        .searchable(text: $searchText, prompt: "공지 검색")
+        .searchable(
+            text: $searchText,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "공지 검색"
+        )
         .onChange(of: searchText) { newValue in
             isSearching = !newValue.isEmpty
             viewModel.search(text: newValue)
