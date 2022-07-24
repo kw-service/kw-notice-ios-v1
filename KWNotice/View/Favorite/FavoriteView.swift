@@ -77,7 +77,8 @@ struct FavoriteView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 50)
-            Text("등록된 즐겨찾기가 없습니다.")
+            Text("등록된 즐겨찾기가 없습니다.\n\n공지를 스와이프하여 즐겨찾기를 추가해보세요!")
+                .multilineTextAlignment(.center)
         }
     }
     
