@@ -19,48 +19,46 @@ struct SettingView: View {
     // MARK: - UI
     var body: some View {
         NavigationView {
-            VStack {
+            List {
                 if !isNotificationGranted {
                     permissionNotGrantedView
                 }
-                List {
-                    Section(
-                        content: kwNotificationSettings,
-                        header: kwNotificationHeader
-                    )
-                    
-                    Section(
-                        content: swNotificationSettings,
-                        header: swNotificationHeader
-                    )
-                    
-                    Section(
-                        content: appSettings,
-                        header: appSettingsHeader
-                    )
-                    
-                    Section(
-                        content: appInformation,
-                        header: appInformationHeader
-                    )
-                    
+                Section(
+                    content: kwNotificationSettings,
+                    header: kwNotificationHeader
+                )
+                
+                Section(
+                    content: swNotificationSettings,
+                    header: swNotificationHeader
+                )
+                
+                Section(
+                    content: appSettings,
+                    header: appSettingsHeader
+                )
+                
+                Section(
+                    content: appInformation,
+                    header: appInformationHeader
+                )
+                
 #if DEBUG
-                    Section(
-                        content: {
-                            NavigationLink("DEV - Saved Notifications") {
-                                SavedNotificationView()
-                            }
-                        },
-                        header: {
-                            Text("Develop")
-                                .foregroundColor(.blue)
+                Section(
+                    content: {
+                        NavigationLink("DEV - Saved Notifications") {
+                            SavedNotificationView()
                         }
-                    )
+                    },
+                    header: {
+                        Text("Develop")
+                            .foregroundColor(.blue)
+                    }
+                )
 #endif
-                }
             }
             .navigationTitle("설정")
-            .listStyle(.plain)
+//            .listStyle(.plain)
         }
         .navigationViewStyle(.stack)
         .onChange(of: scenePhase) { phase in
@@ -86,19 +84,26 @@ extension SettingView {
     }
     
     var permissionNotGrantedView: some View {
-        Text(permissionNotGrantedMessage)
-            .font(.callout)
-            .padding()
-            .background {
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.gray.opacity(0.2))
+        HStack {
+            Text(permissionNotGrantedMessage)
+                .font(.callout)
+            
+            Spacer()
+            
+            Image(systemName: "arrow.right.circle.fill")
+                .foregroundColor(.accentColor)
+        }
+        .onTapGesture {
+            if let appSettingURL = URL(string: UIApplication.openSettingsURLString),
+               UIApplication.shared.canOpenURL(appSettingURL) {
+                UIApplication.shared.open(appSettingURL)
             }
+        }
     }
     
     var permissionNotGrantedMessage: LocalizedStringKey {
-        let appSettingLink = UIApplication.openSettingsURLString
-        let linkedMessage = "알림이 허용되어 있지 않습니다.\n[KW알리미 설정(바로가기)](\(appSettingLink))에서 알림을 허용해주세요."
-        
+        let linkedMessage = "알림이 허용되어 있지 않습니다.\nKW 알리미 설정에서 알림을 허용해주세요."
+
         return LocalizedStringKey(linkedMessage)
     }
     
