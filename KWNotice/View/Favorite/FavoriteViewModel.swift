@@ -43,7 +43,7 @@ final class FavoriteViewModel: AlertPublishableObject, ObservableObject {
         if text.isEmpty {
             favorites = originFavorites
         } else {
-            favorites = originFavorites.filter { $0.title.contains(text) }
+            favorites = originFavorites.filter { $0.title.lowercased().contains(text.lowercased()) }
         }
     }
     

@@ -26,6 +26,10 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
     
     public func search(text: String) -> [KWHomeNotice] {
         if text.isEmpty { return notices }
-        else { return notices.filter { $0.title.contains(text) } }
+        else {
+            return notices.filter {
+                $0.title.lowercased().contains(text.lowercased())
+            }
+        }
     }
 }
