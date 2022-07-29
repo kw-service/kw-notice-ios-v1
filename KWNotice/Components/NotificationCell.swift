@@ -45,6 +45,7 @@ struct NotificationCell: View {
             Text(title)
                 .bold()
                 .lineLimit(1)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
             Text(dateInfo)
                 .font(.caption)
@@ -57,6 +58,7 @@ struct NotificationCell: View {
             }
         }
         .padding(.vertical, 8)
+        .contentShape(Rectangle())
         .onTapGesture {
             isNotificationTapped = true
         }
