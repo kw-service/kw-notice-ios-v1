@@ -51,9 +51,7 @@ struct SWCentralNoticeView: View {
             )
             .onChange(of: searchText) { newValue in
                 isSearching = !newValue.isEmpty
-                withAnimation {
-                    viewModel.search(text: newValue)
-                }
+                viewModel.search(text: newValue)
             }
             .navigationTitle("SW 사업단 공지")
     }
