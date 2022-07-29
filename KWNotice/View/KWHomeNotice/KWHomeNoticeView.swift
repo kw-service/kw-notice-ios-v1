@@ -52,7 +52,9 @@ struct KWHomeNoticeView: View {
             )
             .onChange(of: searchText) { newValue in
                 isSearching = !newValue.isEmpty
-                viewModel.search(text: newValue)
+                withAnimation {
+                    viewModel.search(text: newValue)
+                }
             }
             .navigationTitle("광운대학교 공지")
     }

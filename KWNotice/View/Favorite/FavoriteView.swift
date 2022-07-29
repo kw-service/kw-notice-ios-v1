@@ -55,7 +55,9 @@ struct FavoriteView: View {
             }
             .onChange(of: searchText) { newValue in
                 isSearching = !newValue.isEmpty
-                viewModel.search(newValue)
+                withAnimation {
+                    viewModel.search(newValue)
+                }
             }
     }
     

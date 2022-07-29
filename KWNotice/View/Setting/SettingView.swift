@@ -58,7 +58,6 @@ struct SettingView: View {
 #endif
             }
             .navigationTitle("설정")
-//            .listStyle(.plain)
         }
         .navigationViewStyle(.stack)
         .onChange(of: scenePhase) { phase in
