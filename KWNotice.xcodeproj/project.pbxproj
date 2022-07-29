@@ -26,10 +26,10 @@
 		A54EC22028743F4E00FF03E1 /* SWCentralNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC21F28743F4E00FF03E1 /* SWCentralNoticeViewModel.swift */; };
 		A564330E287928D500489909 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330C287928D500489909 /* Favorite+CoreDataClass.swift */; };
 		A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */; };
-		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A56FC6A628941E5900AF724B /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = A56FC6A528941E5900AF724B /* Fuse */; };
 		A56FC6AB28943B4C00AF724B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FC6AA28943B4C00AF724B /* SafariView.swift */; };
 		A56FC6B028943C5600AF724B /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FC6AF28943C5600AF724B /* BaseURL.swift */; };
+		A56FC6B228943DA300AF724B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56FC6B128943DA300AF724B /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
 		A57665732871B20900725147 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
@@ -137,9 +137,9 @@
 		A54EC21F28743F4E00FF03E1 /* SWCentralNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCentralNoticeViewModel.swift; sourceTree = "<group>"; };
 		A564330C287928D500489909 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A56FC6AA28943B4C00AF724B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		A56FC6AF28943C5600AF724B /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		A56FC6B128943DA300AF724B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A57665692871B16B00725147 /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
@@ -427,8 +427,8 @@
 			isa = PBXGroup;
 			children = (
 				A5B8C09E287296410042E3C5 /* Dependency */,
-				A5682208286F35E40034AF65 /* GoogleService-Info.plist */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
+				A56FC6B128943DA300AF724B /* GoogleService-Info.plist */,
 				A5E89934286D9E77009EE85E /* KWNotice.entitlements */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
 				A5BF259D2876CD1900D5FBE9 /* App */,
@@ -755,7 +755,7 @@
 			files = (
 				A57A2541286D702F002DB735 /* Preview Assets.xcassets in Resources */,
 				A57A253E286D702F002DB735 /* Assets.xcassets in Resources */,
-				A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */,
+				A56FC6B228943DA300AF724B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
