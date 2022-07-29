@@ -175,7 +175,11 @@ extension SettingView {
     }
     
     func version() -> some View {
-        Text("버전 1.0.0")
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            return Text("버전 \(version)")
+        } else {
+            return Text("버전을 불러올 수 없습니다.")
+        }
     }
     
     func appInformationHeader() -> some View {
