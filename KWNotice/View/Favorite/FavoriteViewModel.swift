@@ -7,6 +7,7 @@
 
 import Foundation
 import KWNoticeKit
+import Fuse
 
 final class FavoriteViewModel: AlertPublishableObject, ObservableObject {
     
@@ -35,15 +36,15 @@ final class FavoriteViewModel: AlertPublishableObject, ObservableObject {
             return
         }
         state = .fetched
-        favorites = fetchedFavorites
-        originFavorites = fetchedFavorites
+        favorites = fetchedFavorites.sorted(by: >)
+        originFavorites = favorites
     }
     
     func search(_ text: String) {
         if text.isEmpty {
-            favorites = originFavorites
+            favorites = originFavorites.sorted(by: >)
         } else {
-            favorites = originFavorites.filter { $0.title.lowercased().contains(text.lowercased()) }
+            favorites = fuseSearch(text).sorted(by: >)
         }
     }
     
@@ -58,4 +59,11 @@ final class FavoriteViewModel: AlertPublishableObject, ObservableObject {
         }
         fetch()
     }
+    
+    private func fuseSearch(_ text: String) -> [Favorite] {
+        let fuse = Fuse()
+        return fuse.search(text, in: favorites.map { $0.title })
+            .map { favorites[$0.index] }
+    }
 }
+

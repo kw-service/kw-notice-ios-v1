@@ -34,7 +34,7 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
         do {
             notices = try await repository
                 .fetch()
-                .sorted { $0.postedDate > $1.postedDate }
+                .sorted(by: >)
             isAlreadyFetched = true
             state = .none
         } catch {
@@ -50,6 +50,7 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
     
     func search(text: String) {
         notices = repository.search(text: text)
+            .sorted(by: >)
     }
     
     func addFavorite(_ notice: KWHomeNotice) {

@@ -24,7 +24,7 @@ public final class FavoriteNoticeRepository: FavoriteNoticeRepositoryProtocol {
             let key = makeKey(byId: favorite.id, type: favorite.type)
             favoritesCache.setObject(favorite, forKey: key)
         }
-        return favorites
+        return favorites.sorted(by: >)
     }
     
     public func save(kwHomeNotice: KWHomeNotice) -> Bool {

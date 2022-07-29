@@ -22,18 +22,15 @@ public final class SWCentralRepository: SWCentralRepositoryProtocol {
     
     public func fetch() async throws -> [SWCentralNotice] {
         notices = try await dataStore.fetch()
-        return notices.sorted(by: sortByEarlyDate)
+        return notices.sorted(by: >)
     }
     
     public func search(text: String) -> [SWCentralNotice] {
+        if text.isEmpty { return notices }
+        
         let fuse = Fuse()
         return fuse
             .search(text.removeSpace(), in: notices.map { $0.title.removeSpace() })
             .map { notices[$0.index] }
-            .sorted(by: sortByEarlyDate)
-    }
-    
-    private func sortByEarlyDate(_ lhs: SWCentralNotice, _ rhs: SWCentralNotice) -> Bool {
-        return lhs.postedDate < rhs.postedDate
     }
 }

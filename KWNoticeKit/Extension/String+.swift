@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     
     func yearMonthDateToDate() -> Date? {
         let base = self + "T12:00:00+09:00"
@@ -26,7 +26,7 @@ extension String {
     }
 }
 
-extension Array where Element == String {
+public extension Array where Element == String {
     
     func removeSpace() -> [Element] {
         return self.map { $0.removeSpace() }

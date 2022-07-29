@@ -22,18 +22,15 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
     
     public func fetch() async throws -> [KWHomeNotice] {
         notices = try await dataStore.fetch()
-        return notices.sorted(by: sortByEarlyDate)
+        return notices.sorted(by: >)
     }
     
     public func search(text: String) -> [KWHomeNotice] {
+        if text.isEmpty { return notices }
+        
         let fuse = Fuse()
         return fuse
             .search(text.removeSpace(), in: notices.map { $0.title.removeSpace() })
             .map { notices[$0.index] }
-            .sorted(by: sortByEarlyDate)
-    }
-    
-    private func sortByEarlyDate(_ lhs: KWHomeNotice, _ rhs: KWHomeNotice) -> Bool {
-        return lhs.postedDate < rhs.postedDate
     }
 }

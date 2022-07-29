@@ -316,6 +316,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A56FC6A72894379E00AF724B /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A576657A2871B37600725147 /* KWHomeNotice.swift */,
+				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
 		A57665482871AB4D00725147 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,10 +561,9 @@
 		A5D4D779286ECCB90019F156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A56FC6A72894379E00AF724B /* Notice */,
 				A51EC35128791205000A1FC7 /* Favorite */,
 				A576654B2871ADDC00725147 /* Endpoint.swift */,
-				A576657A2871B37600725147 /* KWHomeNotice.swift */,
-				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
