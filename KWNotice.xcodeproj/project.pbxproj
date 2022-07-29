@@ -14,6 +14,7 @@
 		A51EC35D2879192E000A1FC7 /* FavoriteNoticeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */; };
 		A51EC35F2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */; };
 		A51EC36328791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */; };
+		A525CC082893637D004B45D8 /* NoSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525CC072893637D004B45D8 /* NoSearchResultView.swift */; };
 		A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */; };
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
@@ -124,6 +125,7 @@
 		A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepository.swift; sourceTree = "<group>"; };
 		A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFavoriteNoticeDataStore.swift; sourceTree = "<group>"; };
 		A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepositoryTest.swift; sourceTree = "<group>"; };
+		A525CC072893637D004B45D8 /* NoSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSearchResultView.swift; sourceTree = "<group>"; };
 		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
 				A5C92962287814A7000AE7EA /* Extensions */,
 				A5EF96DE287F3311002AE201 /* SafariView.swift */,
+				A525CC072893637D004B45D8 /* NoSearchResultView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				A5C9296F28785EDC000AE7EA /* NotificationCell.swift in Sources */,
 				A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */,
 				A5C92964287814B2000AE7EA /* Date+.swift in Sources */,
+				A525CC082893637D004B45D8 /* NoSearchResultView.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
