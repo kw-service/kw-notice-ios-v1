@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Fuse
 
 public final class KWHomeRepository: KWHomeRepositoryProtocol {
     
@@ -21,15 +22,18 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
     
     public func fetch() async throws -> [KWHomeNotice] {
         notices = try await dataStore.fetch()
-        return notices
+        return notices.sorted(by: sortByEarlyDate)
     }
     
     public func search(text: String) -> [KWHomeNotice] {
-        if text.isEmpty { return notices }
-        else {
-            return notices.filter {
-                $0.title.lowercased().contains(text.lowercased())
-            }
-        }
+        let fuse = Fuse()
+        return fuse
+            .search(text.removeSpace(), in: notices.map { $0.title.removeSpace() })
+            .map { notices[$0.index] }
+            .sorted(by: sortByEarlyDate)
+    }
+    
+    private func sortByEarlyDate(_ lhs: KWHomeNotice, _ rhs: KWHomeNotice) -> Bool {
+        return lhs.postedDate < rhs.postedDate
     }
 }

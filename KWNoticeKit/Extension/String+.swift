@@ -20,4 +20,15 @@ extension String {
         let formatter = ISO8601DateFormatter()
         return formatter.date(from: base)
     }
+    
+    func removeSpace() -> String {
+        return self.replacingOccurrences(of: " ", with: "")
+    }
+}
+
+extension Array where Element == String {
+    
+    func removeSpace() -> [Element] {
+        return self.map { $0.removeSpace() }
+    }
 }
