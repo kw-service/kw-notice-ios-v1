@@ -15,9 +15,9 @@ public struct Endpoint {
     }
     
     // MARK: - Properties
-    private static let baseURL = URL(
-        string: "https://n6f11u33jf.execute-api.ap-northeast-2.amazonaws.com/v1"
-    )!
+    private static var baseURL: URL {
+        return BaseURL.baseURL
+    }
     
     // MARK: - Methods
     private init() {}
