@@ -13,6 +13,7 @@ struct FavoriteView: View {
     @Environment(\.openURL) var openURL
     @StateObject var viewModel = FavoriteViewModel()
     @State private var searchText = ""
+    @State private var isSearching = false
     
     var body: some View {
         NavigationView {
@@ -42,6 +43,31 @@ struct FavoriteView: View {
     }
     
     var favoritesList: some View {
+        searchResult
+            .listStyle(.plain)
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "즐겨찾기 검색"
+            )
+            .toolbar {
+                EditButton()
+            }
+            .onChange(of: searchText) { newValue in
+                isSearching = !newValue.isEmpty
+                viewModel.search(newValue)
+            }
+    }
+    
+    @ViewBuilder var searchResult: some View {
+        if isSearching && viewModel.favorites.isEmpty {
+            NoSearchResultView()
+        } else {
+            searchList
+        }
+    }
+    
+    var searchList: some View {
         List {
             ForEach(viewModel.favorites, id: \.id) { favorite in
                 HStack(spacing: 15) {
@@ -56,18 +82,6 @@ struct FavoriteView: View {
             .onDelete { indices in
                 viewModel.delete(at: indices)
             }
-        }
-        .listStyle(.plain)
-        .searchable(
-            text: $searchText,
-            placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "즐겨찾기 검색"
-        )
-        .toolbar {
-            EditButton()
-        }
-        .onChange(of: searchText) { newValue in
-            viewModel.search(newValue)
         }
     }
     
