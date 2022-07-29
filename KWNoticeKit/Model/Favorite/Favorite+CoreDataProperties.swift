@@ -26,3 +26,10 @@ extension Favorite {
 extension Favorite : Identifiable {
 
 }
+
+extension Favorite: Comparable {
+    
+    public static func <(lhs: Favorite, rhs: Favorite) -> Bool {
+        return lhs.postedDate < rhs.postedDate
+    }
+}

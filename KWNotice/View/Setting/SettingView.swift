@@ -58,13 +58,14 @@ struct SettingView: View {
 #endif
             }
             .navigationTitle("설정")
-//            .listStyle(.plain)
         }
         .navigationViewStyle(.stack)
         .onChange(of: scenePhase) { phase in
             if phase == .active {
                 updateIsNotificationGranted { isNotificationGranted in
-                    self.isNotificationGranted = isNotificationGranted
+                    withAnimation {
+                        self.isNotificationGranted = isNotificationGranted
+                    }
                 }
             }
         }
@@ -77,7 +78,6 @@ extension SettingView {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             DispatchQueue.main.async {
                 let isNotificationGranted = (settings.authorizationStatus == .authorized)
-                self.isNotificationGranted = isNotificationGranted
                 completion(isNotificationGranted)
             }
         }

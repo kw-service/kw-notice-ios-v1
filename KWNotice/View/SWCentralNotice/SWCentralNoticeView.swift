@@ -37,6 +37,34 @@ struct SWCentralNoticeView: View {
     }
     
     var noticesList: some View {
+        searchResult
+            .listStyle(.plain)
+            .refreshable {
+                if !isSearching {
+                    await viewModel.refresh()
+                }
+            }
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "공지 검색"
+            )
+            .onChange(of: searchText) { newValue in
+                isSearching = !newValue.isEmpty
+                viewModel.search(text: newValue)
+            }
+            .navigationTitle("SW 사업단 공지")
+    }
+    
+    @ViewBuilder var searchResult: some View {
+        if isSearching && viewModel.notices.isEmpty {
+            NoSearchResultView()
+        } else {
+            searchList
+        }
+    }
+    
+    var searchList: some View {
         List {
             ForEach(viewModel.notices, id: \.id) { notice in
                 NotificationCell(swCentralNotice: notice)
@@ -50,22 +78,6 @@ struct SWCentralNoticeView: View {
                     .tint(.yellow)
             }
         }
-        .listStyle(.plain)
-        .refreshable {
-            if !isSearching {
-                await viewModel.refresh()
-            }
-        }
-        .searchable(
-            text: $searchText,
-            placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "공지 검색"
-        )
-        .onChange(of: searchText) { newValue in
-            isSearching = !newValue.isEmpty
-            viewModel.search(text: newValue)
-        }
-        .navigationTitle("SW 사업단 공지")
     }
 }
 

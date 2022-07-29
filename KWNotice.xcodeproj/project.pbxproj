@@ -14,6 +14,7 @@
 		A51EC35D2879192E000A1FC7 /* FavoriteNoticeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */; };
 		A51EC35F2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */; };
 		A51EC36328791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */; };
+		A525CC082893637D004B45D8 /* NoSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525CC072893637D004B45D8 /* NoSearchResultView.swift */; };
 		A54EC2002873D8B500FF03E1 /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */; };
 		A54EC2022873E86500FF03E1 /* KWHomeNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */; };
 		A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EC212287402DB00FF03E1 /* KWHomeNoticeView.swift */; };
@@ -26,6 +27,7 @@
 		A564330E287928D500489909 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330C287928D500489909 /* Favorite+CoreDataClass.swift */; };
 		A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
+		A56FC6A628941E5900AF724B /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = A56FC6A528941E5900AF724B /* Fuse */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
 		A57665732871B20900725147 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
@@ -124,6 +126,7 @@
 		A51EC35C2879192E000A1FC7 /* FavoriteNoticeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepository.swift; sourceTree = "<group>"; };
 		A51EC35E2879198A000A1FC7 /* TestFavoriteNoticeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFavoriteNoticeDataStore.swift; sourceTree = "<group>"; };
 		A51EC36228791B32000A1FC7 /* FavoriteNoticeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeRepositoryTest.swift; sourceTree = "<group>"; };
+		A525CC072893637D004B45D8 /* NoSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSearchResultView.swift; sourceTree = "<group>"; };
 		A54EC1F32873D87500FF03E1 /* KWNoticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWNoticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54EC1FF2873D8B500FF03E1 /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		A54EC2012873E86500FF03E1 /* KWHomeNoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWHomeNoticeViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56FC6A628941E5900AF724B /* Fuse in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +286,7 @@
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
 				A5C92962287814A7000AE7EA /* Extensions */,
 				A5EF96DE287F3311002AE201 /* SafariView.swift */,
+				A525CC072893637D004B45D8 /* NoSearchResultView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -302,6 +307,22 @@
 				A5E2B9CB2874719E00FE46A4 /* SWCentralNoticeView.swift */,
 			);
 			path = SWCentralNotice;
+			sourceTree = "<group>";
+		};
+		A56FC6A428941E5900AF724B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A56FC6A72894379E00AF724B /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A576657A2871B37600725147 /* KWHomeNotice.swift */,
+				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 		A57665482871AB4D00725147 /* Network */ = {
@@ -377,6 +398,7 @@
 				A5D4D76B286ECC5A0019F156 /* KWNoticeKit */,
 				A57665702871B20900725147 /* KWNoticeKitTests */,
 				A57A2537286D702E002DB735 /* Products */,
+				A56FC6A428941E5900AF724B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -539,10 +561,9 @@
 		A5D4D779286ECCB90019F156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A56FC6A72894379E00AF724B /* Notice */,
 				A51EC35128791205000A1FC7 /* Favorite */,
 				A576654B2871ADDC00725147 /* Endpoint.swift */,
-				A576657A2871B37600725147 /* KWHomeNotice.swift */,
-				A5B8C08728727CB70042E3C5 /* SWCentralNotice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -642,6 +663,9 @@
 			dependencies = (
 			);
 			name = KWNoticeKit;
+			packageProductDependencies = (
+				A56FC6A528941E5900AF724B /* Fuse */,
+			);
 			productName = KWNoticeKit;
 			productReference = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -685,6 +709,7 @@
 			mainGroup = A57A252D286D702E002DB735;
 			packageReferences = (
 				A5E8992F286D9CA2009EE85E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A56FC6A128941E2D00AF724B /* XCRemoteSwiftPackageReference "fuse-swift" */,
 			);
 			productRefGroup = A57A2537286D702E002DB735 /* Products */;
 			projectDirPath = "";
@@ -782,6 +807,7 @@
 				A5C9296F28785EDC000AE7EA /* NotificationCell.swift in Sources */,
 				A5E2B9CC2874719E00FE46A4 /* SWCentralNoticeView.swift in Sources */,
 				A5C92964287814B2000AE7EA /* Date+.swift in Sources */,
+				A525CC082893637D004B45D8 /* NoSearchResultView.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
@@ -1108,6 +1134,7 @@
 		A5D4D773286ECC5A0019F156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1117,6 +1144,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KW 알리미";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1140,6 +1168,7 @@
 		A5D4D774286ECC5A0019F156 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1149,6 +1178,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KW 알리미";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1219,6 +1249,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A56FC6A128941E2D00AF724B /* XCRemoteSwiftPackageReference "fuse-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krisk/fuse-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		A5E8992F286D9CA2009EE85E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1230,6 +1268,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A56FC6A528941E5900AF724B /* Fuse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A56FC6A128941E2D00AF724B /* XCRemoteSwiftPackageReference "fuse-swift" */;
+			productName = Fuse;
+		};
 		A5E89930286D9CA2009EE85E /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A5E8992F286D9CA2009EE85E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
