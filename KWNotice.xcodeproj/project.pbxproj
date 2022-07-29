@@ -28,6 +28,7 @@
 		A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */; };
 		A5682209286F35E40034AF65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5682208286F35E40034AF65 /* GoogleService-Info.plist */; };
 		A56FC6A628941E5900AF724B /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = A56FC6A528941E5900AF724B /* Fuse */; };
+		A56FC6AB28943B4C00AF724B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FC6AA28943B4C00AF724B /* SafariView.swift */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
 		A57665732871B20900725147 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
@@ -77,7 +78,6 @@
 		A5E89931286D9CA2009EE85E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89930286D9CA2009EE85E /* FirebaseAnalytics */; };
 		A5E89933286D9CA2009EE85E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A5E89932286D9CA2009EE85E /* FirebaseMessaging */; };
 		A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89936286D9EFE009EE85E /* AppDelegate.swift */; };
-		A5EF96DF287F3311002AE201 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF96DE287F3311002AE201 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +137,7 @@
 		A564330C287928D500489909 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5682208286F35E40034AF65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A56FC6AA28943B4C00AF724B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A57665692871B16B00725147 /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
@@ -184,7 +185,6 @@
 		A5E89934286D9E77009EE85E /* KWNotice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KWNotice.entitlements; sourceTree = "<group>"; };
 		A5E89935286D9E90009EE85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A5E89936286D9EFE009EE85E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5EF96DE287F3311002AE201 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +284,8 @@
 				A5C9296C28785A79000AE7EA /* PlaceholderView.swift */,
 				A5C9296E28785EDC000AE7EA /* NotificationCell.swift */,
 				A54EC21528741D1300FF03E1 /* AlertPublishableObject.swift */,
+				A56FC6AA28943B4C00AF724B /* SafariView.swift */,
 				A5C92962287814A7000AE7EA /* Extensions */,
-				A5EF96DE287F3311002AE201 /* SafariView.swift */,
 				A525CC072893637D004B45D8 /* NoSearchResultView.swift */,
 			);
 			path = Components;
@@ -793,6 +793,7 @@
 			files = (
 				A54EC22028743F4E00FF03E1 /* SWCentralNoticeViewModel.swift in Sources */,
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
+				A56FC6AB28943B4C00AF724B /* SafariView.swift in Sources */,
 				A5C92968287815A3000AE7EA /* Notification+CoreDataProperties.swift in Sources */,
 				A54EC213287402DB00FF03E1 /* KWHomeNoticeView.swift in Sources */,
 				A5BE6170287E9BBD006B241B /* FavoriteViewModel.swift in Sources */,
@@ -811,7 +812,6 @@
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
-				A5EF96DF287F3311002AE201 /* SafariView.swift in Sources */,
 				A5C92967287815A3000AE7EA /* Notification+CoreDataClass.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
 				A5BE6171287EA414006B241B /* FavoriteNotice.xcdatamodeld in Sources */,
