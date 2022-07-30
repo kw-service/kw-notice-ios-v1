@@ -25,7 +25,7 @@ struct KWHomeNoticeView: View {
                 case .fetching:
                     ProgressView()
                 case .error:
-                    PlaceholderView {
+                    PlaceholderView(navigationTitle: "광운대학교 공지") {
                         await viewModel.refresh()
                     }
             }

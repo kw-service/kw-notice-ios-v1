@@ -24,7 +24,7 @@ struct SWCentralNoticeView: View {
                 case .fetching:
                     ProgressView()
                 case .error:
-                    PlaceholderView {
+                    PlaceholderView(navigationTitle: "SW사업단 공지") {
                         await viewModel.refresh()
                     }
             }

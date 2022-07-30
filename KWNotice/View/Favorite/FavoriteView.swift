@@ -36,7 +36,7 @@ struct FavoriteView: View {
             case .fetched:
                 favoritesList
             case .error:
-                PlaceholderView {
+                PlaceholderView(navigationTitle: "즐겨찾기") {
                     viewModel.fetch()
                 }
         }
