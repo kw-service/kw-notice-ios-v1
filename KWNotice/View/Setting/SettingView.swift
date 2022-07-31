@@ -138,7 +138,7 @@ extension SettingView {
     @ViewBuilder
     func appSettings() -> some View {
         Toggle(isOn: $useExternalBrowser) {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text("외부 브라우저 사용")
                 Text(getSubtitleForUseExternalBrowser())
                     .font(.caption)
@@ -178,7 +178,7 @@ extension SettingView {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             return Text("버전 \(version)")
         } else {
-            return Text("버전을 불러올 수 없습니다.")
+            return Text(verbatim: "버전을 불러올 수 없습니다.")
         }
     }
     
