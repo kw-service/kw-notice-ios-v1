@@ -16,6 +16,10 @@ struct KWHomeNoticeView: View {
     
     @State private var searchText = ""
     @State private var isSearching = false
+    @State private var presentingSelectTagView = false
+    
+    @State var selectedNoticeTag = "전체"
+        
     
     var body: some View {
         NavigationView {
@@ -50,9 +54,19 @@ struct KWHomeNoticeView: View {
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: "공지 검색"
             )
+            .toolbar {
+                Button(selectedNoticeTag) { self.presentingSelectTagView = true }
+                    .sheet(isPresented: $presentingSelectTagView, content: {
+                        SelectNoticeTagView(selectedNoticeTag: $selectedNoticeTag)
+                    })
+            }
             .onChange(of: searchText) { newValue in
                 isSearching = !newValue.isEmpty
                 viewModel.search(text: newValue)
+            }
+            .onChange(of: selectedNoticeTag) { selectedTag in
+                self.presentingSelectTagView = false
+                viewModel.filter(by: selectedTag)
             }
             .navigationTitle("광운대학교 공지")
     }
