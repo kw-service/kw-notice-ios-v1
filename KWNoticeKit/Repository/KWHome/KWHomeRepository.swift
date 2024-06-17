@@ -25,6 +25,15 @@ public final class KWHomeRepository: KWHomeRepositoryProtocol {
         return notices.sorted(by: >)
     }
     
+    public func filter(by tag: String) -> [KWHomeNotice] {
+        guard tag != "전체" else { return notices }
+        return notices.filter { $0.tag == tag}
+    }
+    
+    public func getTag() -> [String] {
+        return Array(Set(notices.map { $0.tag })).sorted(by: >)
+    }
+    
     public func search(text: String) -> [KWHomeNotice] {
         if text.isEmpty { return notices }
         

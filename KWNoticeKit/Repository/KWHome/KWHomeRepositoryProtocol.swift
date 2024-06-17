@@ -10,5 +10,7 @@ import Combine
 
 public protocol KWHomeRepositoryProtocol {
     func fetch() async throws -> [KWHomeNotice]
+    func filter(by tag: String) -> [KWHomeNotice]
+    func getTag() -> [String]
     func search(text: String) -> [KWHomeNotice]
 }
