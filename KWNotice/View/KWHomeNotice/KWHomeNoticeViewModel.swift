@@ -43,6 +43,10 @@ final class KWHomeNoticeViewModel: AlertPublishableObject, ObservableObject {
         }
     }
     
+    func filter(by tag: String) {
+        notices = repository.filter(by: tag)
+    }
+
     func refresh() async {
         isAlreadyFetched = false
         await fetch()

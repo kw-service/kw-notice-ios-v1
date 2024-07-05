@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871F83382C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F83372C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift */; };
+		871F833A2C1FFDB0006C9685 /* SelectNoticeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F83392C1FFDB0006C9685 /* SelectNoticeTagView.swift */; };
+		871F833C2C1FFDCC006C9685 /* NoticeTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F833B2C1FFDCC006C9685 /* NoticeTagCell.swift */; };
 		A51EC35428791211000A1FC7 /* FavoriteNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51EC35228791211000A1FC7 /* FavoriteNotice.xcdatamodeld */; };
 		A51EC3562879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */; };
 		A51EC3582879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51EC3572879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift */; };
@@ -120,6 +123,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		871F83372C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNoticeTagViewModel.swift; sourceTree = "<group>"; };
+		871F83392C1FFDB0006C9685 /* SelectNoticeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNoticeTagView.swift; sourceTree = "<group>"; };
+		871F833B2C1FFDCC006C9685 /* NoticeTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTagCell.swift; sourceTree = "<group>"; };
 		A51EC35328791211000A1FC7 /* FavoriteNotice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNotice.xcdatamodel; sourceTree = "<group>"; };
 		A51EC3552879127E000A1FC7 /* FavoriteNoticeDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNoticeDataStoreProtocol.swift; sourceTree = "<group>"; };
 		A51EC3572879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavoriteNoticeDataStore.swift; sourceTree = "<group>"; };
@@ -226,6 +232,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871F83362C1FFD8D006C9685 /* SelectNoticeTag */ = {
+			isa = PBXGroup;
+			children = (
+				871F83372C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift */,
+				871F83392C1FFDB0006C9685 /* SelectNoticeTagView.swift */,
+			);
+			path = SelectNoticeTag;
+			sourceTree = "<group>";
+		};
 		A51EC350287911FB000A1FC7 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +304,7 @@
 				A56FC6AA28943B4C00AF724B /* SafariView.swift */,
 				A5C92962287814A7000AE7EA /* Extensions */,
 				A525CC072893637D004B45D8 /* NoSearchResultView.swift */,
+				871F833B2C1FFDCC006C9685 /* NoticeTagCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -453,6 +469,7 @@
 			children = (
 				A57A253B286D702E002DB735 /* RootView.swift */,
 				A54EC211287402C800FF03E1 /* KWHomeNotice */,
+				871F83362C1FFD8D006C9685 /* SelectNoticeTag */,
 				A54EC21E28743F3F00FF03E1 /* SWCentralNotice */,
 				A57A2548286D7645002DB735 /* Favorite */,
 				A57A2549286D7648002DB735 /* Setting */,
@@ -803,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54EC22028743F4E00FF03E1 /* SWCentralNoticeViewModel.swift in Sources */,
+				871F833A2C1FFDB0006C9685 /* SelectNoticeTagView.swift in Sources */,
 				A57A254D286D7661002DB735 /* FavoriteView.swift in Sources */,
 				A56FC6AB28943B4C00AF724B /* SafariView.swift in Sources */,
 				A5C92968287815A3000AE7EA /* Notification+CoreDataProperties.swift in Sources */,
@@ -821,7 +839,9 @@
 				A5C92964287814B2000AE7EA /* Date+.swift in Sources */,
 				A525CC082893637D004B45D8 /* NoSearchResultView.swift in Sources */,
 				A5B8C0A02872964D0042E3C5 /* DependencyContainer.swift in Sources */,
+				871F833C2C1FFDCC006C9685 /* NoticeTagCell.swift in Sources */,
 				A5E89937286D9EFE009EE85E /* AppDelegate.swift in Sources */,
+				871F83382C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift in Sources */,
 				A54EC21628741D1300FF03E1 /* AlertPublishableObject.swift in Sources */,
 				A5C92967287815A3000AE7EA /* Notification+CoreDataClass.swift in Sources */,
 				A57A253C286D702E002DB735 /* RootView.swift in Sources */,
