@@ -29,11 +29,6 @@ struct SettingView: View {
                 )
                 
                 Section(
-                    content: swNotificationSettings,
-                    header: swNotificationHeader
-                )
-                
-                Section(
                     content: appSettings,
                     header: appSettingsHeader
                 )
@@ -123,12 +118,14 @@ extension SettingView {
     }
     
     // MARK: - SW Notification
+    @available(*, deprecated, message: "SW Notice no longer supported.")
     @ViewBuilder
     func swNotificationSettings() -> some View {
         Toggle("새로운 공지사항 알림", isOn: $topicSubscriber.swNewNotice)
             .disabled(!isNotificationGranted)
     }
     
+    @available(*, deprecated, message: "SW Notice no longer supported.")
     func swNotificationHeader() -> some View {
         Text("SW중심대학산업단 알림")
             .foregroundColor(.accentColor)

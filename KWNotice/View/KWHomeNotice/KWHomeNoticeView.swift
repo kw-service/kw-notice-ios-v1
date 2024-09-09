@@ -56,12 +56,16 @@ struct KWHomeNoticeView: View {
             )
             .toolbar {
                 Button(selectedNoticeTag) { self.presentingSelectTagView = true }
-                    .sheet(isPresented: $presentingSelectTagView, content: {
-                        SelectNoticeTagView(selectedNoticeTag: $selectedNoticeTag)
-                    })
+                    .sheet(
+                        isPresented: $presentingSelectTagView,
+                        content: {
+                            SelectNoticeTagView(selectedNoticeTag: $selectedNoticeTag)
+                        }
+                    )
             }
             .onChange(of: searchText) { newValue in
                 isSearching = !newValue.isEmpty
+                selectedNoticeTag = "전체"
                 viewModel.search(text: newValue)
             }
             .onChange(of: selectedNoticeTag) { selectedTag in

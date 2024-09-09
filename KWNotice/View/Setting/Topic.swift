@@ -8,7 +8,11 @@
 import Foundation
 
 enum Topic: String, CaseIterable {
+    static var allCases: [Topic] = [.kwNewNotice, .kwEditNotice]
+    
     case kwNewNotice = "kw-home-new"
     case kwEditNotice = "kw-home-edit"
+    
+    @available(*, deprecated, message: "SW Notice no longer supported.")
     case swNewNotice = "sw-central-new"
 }
