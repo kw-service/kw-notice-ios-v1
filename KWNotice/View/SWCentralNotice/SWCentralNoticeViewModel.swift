@@ -8,6 +8,7 @@
 import Foundation
 import KWNoticeKit
 
+@available(*, deprecated, message: "SW Notice no longer supported.")
 @MainActor
 final class SWCentralNoticeViewModel: AlertPublishableObject, ObservableObject {
     

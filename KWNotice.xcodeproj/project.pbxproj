@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA926202C37813400D2684F /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9261F2C37813400D2684F /* BaseURL.swift */; };
+		2FA926242C3781D700D2684F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FA926232C3781D700D2684F /* GoogleService-Info.plist */; };
 		871F83382C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F83372C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift */; };
 		871F833A2C1FFDB0006C9685 /* SelectNoticeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F83392C1FFDB0006C9685 /* SelectNoticeTagView.swift */; };
 		871F833C2C1FFDCC006C9685 /* NoticeTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F833B2C1FFDCC006C9685 /* NoticeTagCell.swift */; };
@@ -31,8 +33,6 @@
 		A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */; };
 		A56FC6A628941E5900AF724B /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = A56FC6A528941E5900AF724B /* Fuse */; };
 		A56FC6AB28943B4C00AF724B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FC6AA28943B4C00AF724B /* SafariView.swift */; };
-		A56FC6B028943C5600AF724B /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56FC6AF28943C5600AF724B /* BaseURL.swift */; };
-		A56FC6B228943DA300AF724B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56FC6B128943DA300AF724B /* GoogleService-Info.plist */; };
 		A576654A2871AB6B00725147 /* APIRequest+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57665492871AB6B00725147 /* APIRequest+APIError.swift */; };
 		A576654C2871ADDC00725147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A576654B2871ADDC00725147 /* Endpoint.swift */; };
 		A57665732871B20900725147 /* KWNoticeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D4D76A286ECC5A0019F156 /* KWNoticeKit.framework */; };
@@ -123,6 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2FA9261F2C37813400D2684F /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		2FA926232C3781D700D2684F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		871F83372C1FFDA9006C9685 /* SelectNoticeTagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNoticeTagViewModel.swift; sourceTree = "<group>"; };
 		871F83392C1FFDB0006C9685 /* SelectNoticeTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNoticeTagView.swift; sourceTree = "<group>"; };
 		871F833B2C1FFDCC006C9685 /* NoticeTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTagCell.swift; sourceTree = "<group>"; };
@@ -144,8 +146,6 @@
 		A564330C287928D500489909 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A564330D287928D500489909 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A56FC6AA28943B4C00AF724B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		A56FC6AF28943C5600AF724B /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
-		A56FC6B128943DA300AF724B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A57665492871AB6B00725147 /* APIRequest+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRequest+APIError.swift"; sourceTree = "<group>"; };
 		A576654B2871ADDC00725147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A57665692871B16B00725147 /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 		A56FC6AE28943C5000AF724B /* Privates */ = {
 			isa = PBXGroup;
 			children = (
-				A56FC6AF28943C5600AF724B /* BaseURL.swift */,
+				2FA9261F2C37813400D2684F /* BaseURL.swift */,
 			);
 			path = Privates;
 			sourceTree = "<group>";
@@ -444,7 +444,7 @@
 			children = (
 				A5B8C09E287296410042E3C5 /* Dependency */,
 				A5E89935286D9E90009EE85E /* Info.plist */,
-				A56FC6B128943DA300AF724B /* GoogleService-Info.plist */,
+				2FA926232C3781D700D2684F /* GoogleService-Info.plist */,
 				A5E89934286D9E77009EE85E /* KWNotice.entitlements */,
 				A57A2539286D702E002DB735 /* KWNoticeApp.swift */,
 				A5BF259D2876CD1900D5FBE9 /* App */,
@@ -771,8 +771,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57A2541286D702F002DB735 /* Preview Assets.xcassets in Resources */,
+				2FA926242C3781D700D2684F /* GoogleService-Info.plist in Resources */,
 				A57A253E286D702F002DB735 /* Assets.xcassets in Resources */,
-				A56FC6B228943DA300AF724B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +857,6 @@
 			files = (
 				A57665802871B56800725147 /* KWHomeDataStore.swift in Sources */,
 				A576657E2871B50E00725147 /* KWHomeDataStoreProtocol.swift in Sources */,
-				A56FC6B028943C5600AF724B /* BaseURL.swift in Sources */,
 				A5E038CE287F231B00C391B2 /* String+.swift in Sources */,
 				A5B8C09028727F200042E3C5 /* SWCentralRepositoryProtocol.swift in Sources */,
 				A5B8C09228727F6C0042E3C5 /* SWCentralRepository.swift in Sources */,
@@ -865,6 +864,7 @@
 				A51EC35D2879192E000A1FC7 /* FavoriteNoticeRepository.swift in Sources */,
 				A576657B2871B37600725147 /* KWHomeNotice.swift in Sources */,
 				A564330F287928D500489909 /* Favorite+CoreDataProperties.swift in Sources */,
+				2FA926202C37813400D2684F /* BaseURL.swift in Sources */,
 				A576654C2871ADDC00725147 /* Endpoint.swift in Sources */,
 				A5B8C08828727CB70042E3C5 /* SWCentralNotice.swift in Sources */,
 				A51EC3582879130A000A1FC7 /* LocalFavoriteNoticeDataStore.swift in Sources */,
@@ -1122,7 +1122,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Harry.KWNotice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1156,7 +1156,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Harry.KWNotice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1296,7 +1296,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				minimumVersion = 10.22.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

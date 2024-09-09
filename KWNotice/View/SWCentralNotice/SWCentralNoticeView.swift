@@ -8,6 +8,7 @@
 import SwiftUI
 import KWNoticeKit
 
+@available(*, deprecated, message: "SW Notice no longer supported.")
 struct SWCentralNoticeView: View {
     
     @Environment(\.openURL) var openURL
@@ -81,6 +82,7 @@ struct SWCentralNoticeView: View {
     }
 }
 
+@available(*, deprecated, message: "SW Notice no longer supported.")
 struct SWCentralNoticeView_Previews: PreviewProvider {
     static var previews: some View {
         SWCentralNoticeView()

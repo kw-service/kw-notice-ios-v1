@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class AlertPublishableObject {
     
     @Published var alertMessage: String = ""

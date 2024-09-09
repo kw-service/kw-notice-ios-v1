@@ -16,12 +16,6 @@ struct RootView: View {
                     Text("광운대학교")
                 }
 
-            SWCentralNoticeView()
-                .tabItem {
-                    Image(systemName: "s.circle.fill")
-                    Text("SW 사업단")
-                }
-
             FavoriteView()
                 .tabItem {
                     Image(systemName: "star.fill")

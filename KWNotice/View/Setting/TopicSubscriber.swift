@@ -15,6 +15,8 @@ final class TopicSubscriber: ObservableObject {
     // MARK: - Properties
     @Published var kwNewNotice: Bool = true
     @Published var kwEditNotice: Bool = true
+    
+    @available(*, deprecated, message: "SW Notice no longer supported.")
     @Published var swNewNotice: Bool = true
     
     private var cancellables = Set<AnyCancellable>()
@@ -29,7 +31,6 @@ final class TopicSubscriber: ObservableObject {
     private func subscribeNoticesState() {
         subscribeKWNewNotice()
         subscribeKWEditNotice()
-        subscribeSWNewNotice()
     }
     
     private func fetchNoticesState() {
@@ -55,6 +56,7 @@ extension TopicSubscriber {
             .store(in: &cancellables)
     }
     
+    @available(*, deprecated, message: "SW Notice no longer supported.")
     private func subscribeSWNewNotice() {
         $swNewNotice
             .sink(receiveValue: { [weak self] subscribeState in
@@ -114,9 +116,9 @@ extension TopicSubscriber {
     
     private func setNoticeState(_ state: Bool, ofTopic topic: Topic) {
         switch topic {
-            case .kwNewNotice: kwNewNotice = state
-            case .kwEditNotice: kwEditNotice = state
-            case .swNewNotice: swNewNotice = state
+        case .kwNewNotice: kwNewNotice = state
+        case .kwEditNotice: kwEditNotice = state
+        default: return
         }
     }
 }
